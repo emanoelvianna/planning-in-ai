@@ -27,6 +27,7 @@
    (IS-TILE tile13)
    (IS-TILE tile14)
    (IS-TILE tile15)
+   (IS-GLUED tile6)
    (IS-ROW row1)
    (IS-ROW row2)
    (IS-ROW row3)

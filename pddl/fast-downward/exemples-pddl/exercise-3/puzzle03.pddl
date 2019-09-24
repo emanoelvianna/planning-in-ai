@@ -1,8 +1,8 @@
-;; Weighted fifteen puzzle example task.
+;; Fifteen puzzle example task.
 
 (define (problem fifteen-puzzle-example)
 
-  (:domain weighted-sliding-tile)
+  (:domain sliding-tile)
 
   (:objects
    tile1 tile2 tile3 tile4 tile5
@@ -27,6 +27,21 @@
    (IS-TILE tile13)
    (IS-TILE tile14)
    (IS-TILE tile15)
+   (is-used-tile tile1)
+   (is-used-tile tile2)
+   (is-used-tile tile3)
+   (is-used-tile tile4)
+   (is-used-tile tile5)
+   (is-used-tile tile6)
+   (is-used-tile tile7)
+   (is-used-tile tile8)
+   (is-used-tile tile9)
+   (is-used-tile tile10)
+   (is-used-tile tile11)
+   (is-used-tile tile12)
+   (is-used-tile tile13)
+   (is-used-tile tile14)
+   (is-used-tile tile15)
    (IS-ROW row1)
    (IS-ROW row2)
    (IS-ROW row3)
@@ -62,25 +77,6 @@
    (tile-at tile4 row4 col2)
    (tile-at tile10 row4 col3)
    (tile-at tile8 row4 col4)
-
-   (= (total-cost) 0)
-   ;; Set the weight of each tile to the
-   ;; number of its prime factors.
-   (= (WEIGHT tile1) 0)
-   (= (WEIGHT tile2) 1)
-   (= (WEIGHT tile3) 1)
-   (= (WEIGHT tile4) 2)
-   (= (WEIGHT tile5) 1)
-   (= (WEIGHT tile6) 2)
-   (= (WEIGHT tile7) 1)
-   (= (WEIGHT tile8) 3)
-   (= (WEIGHT tile9) 2)
-   (= (WEIGHT tile10) 2)
-   (= (WEIGHT tile11) 1)
-   (= (WEIGHT tile12) 3)
-   (= (WEIGHT tile13) 1)
-   (= (WEIGHT tile14) 2)
-   (= (WEIGHT tile15) 2)
    )
 
   ;; goal state
@@ -101,6 +97,4 @@
     (tile-at tile13 row4 col1)
     (tile-at tile14 row4 col2)
     (tile-at tile15 row4 col3)))
-
-  (:metric minimize (total-cost))
   )

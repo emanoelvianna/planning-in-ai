@@ -120,3 +120,764 @@ Makefile:126: recipe for target 'cmTC_bdf44/fast' failed
 make: *** [cmTC_bdf44/fast] Error 2
 
 
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8fa6c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8fa6c.dir/build.make CMakeFiles/cmTC_8fa6c.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8fa6c.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_8fa6c.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8fa6c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fa6c.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_8fa6c.dir/testCCompiler.c.o  -o cmTC_8fa6c 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8fa6c.dir/build.make:97: recipe for target 'cmTC_8fa6c' failed
+make[1]: *** [cmTC_8fa6c] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8fa6c/fast' failed
+make: *** [cmTC_8fa6c/fast] Error 2
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8a960/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8a960.dir/build.make CMakeFiles/cmTC_8a960.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8a960.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_8a960.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8a960
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a960.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_8a960.dir/testCCompiler.c.o  -o cmTC_8a960 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8a960.dir/build.make:97: recipe for target 'cmTC_8a960' failed
+make[1]: *** [cmTC_8a960] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8a960/fast' failed
+make: *** [cmTC_8a960/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4f2eb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4f2eb.dir/build.make CMakeFiles/cmTC_4f2eb.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4f2eb.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_4f2eb.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_4f2eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f2eb.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_4f2eb.dir/testCCompiler.c.o  -o cmTC_4f2eb 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4f2eb.dir/build.make:97: recipe for target 'cmTC_4f2eb' failed
+make[1]: *** [cmTC_4f2eb] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4f2eb/fast' failed
+make: *** [cmTC_4f2eb/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_846cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_846cd.dir/build.make CMakeFiles/cmTC_846cd.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_846cd.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_846cd.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_846cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_846cd.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_846cd.dir/testCCompiler.c.o  -o cmTC_846cd 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_846cd.dir/build.make:97: recipe for target 'cmTC_846cd' failed
+make[1]: *** [cmTC_846cd] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_846cd/fast' failed
+make: *** [cmTC_846cd/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_417e6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_417e6.dir/build.make CMakeFiles/cmTC_417e6.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_417e6.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_417e6.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_417e6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_417e6.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_417e6.dir/testCCompiler.c.o  -o cmTC_417e6 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_417e6.dir/build.make:97: recipe for target 'cmTC_417e6' failed
+make[1]: *** [cmTC_417e6] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_417e6/fast' failed
+make: *** [cmTC_417e6/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0da06/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0da06.dir/build.make CMakeFiles/cmTC_0da06.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0da06.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_0da06.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0da06
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0da06.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_0da06.dir/testCCompiler.c.o  -o cmTC_0da06 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0da06.dir/build.make:97: recipe for target 'cmTC_0da06' failed
+make[1]: *** [cmTC_0da06] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0da06/fast' failed
+make: *** [cmTC_0da06/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ffc09/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ffc09.dir/build.make CMakeFiles/cmTC_ffc09.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffc09.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_ffc09.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_ffc09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffc09.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_ffc09.dir/testCCompiler.c.o  -o cmTC_ffc09 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ffc09.dir/build.make:97: recipe for target 'cmTC_ffc09' failed
+make[1]: *** [cmTC_ffc09] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ffc09/fast' failed
+make: *** [cmTC_ffc09/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2f94a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2f94a.dir/build.make CMakeFiles/cmTC_2f94a.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2f94a.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_2f94a.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_2f94a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f94a.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_2f94a.dir/testCCompiler.c.o  -o cmTC_2f94a 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2f94a.dir/build.make:97: recipe for target 'cmTC_2f94a' failed
+make[1]: *** [cmTC_2f94a] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2f94a/fast' failed
+make: *** [cmTC_2f94a/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_98cc4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_98cc4.dir/build.make CMakeFiles/cmTC_98cc4.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_98cc4.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_98cc4.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_98cc4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98cc4.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_98cc4.dir/testCCompiler.c.o  -o cmTC_98cc4 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_98cc4.dir/build.make:97: recipe for target 'cmTC_98cc4' failed
+make[1]: *** [cmTC_98cc4] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_98cc4/fast' failed
+make: *** [cmTC_98cc4/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0e664/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0e664.dir/build.make CMakeFiles/cmTC_0e664.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e664.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_0e664.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0e664
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e664.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_0e664.dir/testCCompiler.c.o  -o cmTC_0e664 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0e664.dir/build.make:97: recipe for target 'cmTC_0e664' failed
+make[1]: *** [cmTC_0e664] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0e664/fast' failed
+make: *** [cmTC_0e664/fast] Error 2
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/g++ 
+Build flags: ;-m32
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_22650/fast"
+/usr/bin/make -f CMakeFiles/cmTC_22650.dir/build.make CMakeFiles/cmTC_22650.dir/build
+make[1]: Entering directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_22650.dir/testCCompiler.c.o
+/usr/bin/gcc   -m32    -o CMakeFiles/cmTC_22650.dir/testCCompiler.c.o   -c /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_22650
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22650.dir/link.txt --verbose=1
+/usr/bin/gcc  -m32     -rdynamic CMakeFiles/cmTC_22650.dir/testCCompiler.c.o  -o cmTC_22650 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_22650.dir/build.make:97: recipe for target 'cmTC_22650' failed
+make[1]: *** [cmTC_22650] Error 1
+make[1]: Leaving directory '/home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release32/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_22650/fast' failed
+make: *** [cmTC_22650/fast] Error 2
+
+

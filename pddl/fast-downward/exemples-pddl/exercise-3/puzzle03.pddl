@@ -9,7 +9,8 @@
    tile6 tile7 tile8 tile9 tile10
    tile11 tile12 tile13 tile14 tile15
    row1 row2 row3 row4
-   col1 col2 col3 col4)
+   col1 col2 col3 col4
+  )
 
   (:init
    (IS-TILE tile1)
@@ -77,7 +78,7 @@
    (tile-at tile4 row4 col2)
    (tile-at tile10 row4 col3)
    (tile-at tile8 row4 col4)
-   )
+  )
 
   ;; goal state
   (:goal
@@ -96,5 +97,6 @@
     (tile-at tile12 row3 col4)
     (tile-at tile13 row4 col1)
     (tile-at tile14 row4 col2)
-    (tile-at tile15 row4 col3)))
+    (tile-at tile15 row4 col3))
   )
+)

@@ -1,0 +1,1 @@
+Em um modo geral conseguimos observar que a escolha da heurística pode influenciar sobre o tempo e a quantidade de estados gerados, assim como também a possibilidade de encontrar uma solução para o problema. Também percebe-se que a definição do mundo com critérios mais rígidos com é o caso do exercício 2 influencia diretamente sobre a busca para uma solução.

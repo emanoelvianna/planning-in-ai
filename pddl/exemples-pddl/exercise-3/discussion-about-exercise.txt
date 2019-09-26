@@ -1,0 +1,1 @@
+Com a inclusão da possibilidade de remover e incluir uma peça removida, percebe-se que para todas as heurísticas executadas as peças nunca são movimentadas, mas sim removidas e inseridas já na ordem esperada. Com isso o tempo de execução execução quando parado as versões anteriores é menor assim como a quantidade de estados gerados.

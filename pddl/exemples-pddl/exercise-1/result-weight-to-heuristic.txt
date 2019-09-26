@@ -1,0 +1,398 @@
+emanoel@pc:~/Downloads/fast-downward-19.06$ ./fast-downward.py --build release exemples-pddl/exercise-1/weight.pddl exemples-pddl/exercise-1/weight01.pddl --heuristic "h=ff()" --search "eager_greedy([h])"
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/emanoel/Downloads/fast-downward-19.06/builds/release/bin/translate/translate.py exemples-pddl/exercise-1/weight.pddl exemples-pddl/exercise-1/weight01.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 49 rules.
+Computing model... [0.030s CPU, 0.025s wall-clock]
+1052 relevant atoms
+1256 auxiliary atoms
+2308 final queue length
+3508 total queue pushes
+Completing instantiation... [0.040s CPU, 0.039s wall-clock]
+Instantiating: [0.070s CPU, 0.071s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.000s CPU, 0.004s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.010s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.009s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.030s CPU, 0.030s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+16 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.013s wall-clock]
+Reordering and filtering variables...
+16 of 16 variables necessary.
+0 of 16 mutex groups necessary.
+720 of 720 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.004s wall-clock]
+Translator variables: 16
+Translator derived variables: 0
+Translator facts: 256
+Translator goal facts: 15
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 720
+Translator axioms: 0
+Translator task size: 3887
+Translator peak memory: 49348 KB
+Writing output... [0.000s CPU, 0.005s wall-clock]
+Done! [0.140s CPU, 0.141s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/emanoel/Downloads/fast-downward-19.06/builds/release/bin/downward --heuristic 'h=ff()' --search 'eager_greedy([h])' --internal-plan-file sas_plan < output.sas
+reading input... [t=2.8924e-05s]
+done reading input! [t=0.00247724s]
+Simplifying 1440 unary operators... done! [1440 unary operators]
+time to simplify: 0.000654805s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done! [t=0.00493855s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000371644s
+Variables: 16
+FactPairs: 256
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for ff: 64
+[g=0, 1 evaluated, 0 expanded, t=0.00523201s, 22584 KB]
+Initial heuristic value for ff: 64
+pruning method: none
+New best heuristic value for ff: 63
+[g=2, 2 evaluated, 1 expanded, t=0.00534941s, 22584 KB]
+New best heuristic value for ff: 61
+[g=1, 4 evaluated, 1 expanded, t=0.00546554s, 22584 KB]
+New best heuristic value for ff: 60
+[g=3, 7 evaluated, 2 expanded, t=0.00561585s, 22584 KB]
+New best heuristic value for ff: 59
+[g=8, 16 evaluated, 7 expanded, t=0.00591019s, 22584 KB]
+New best heuristic value for ff: 58
+[g=10, 18 evaluated, 8 expanded, t=0.00602064s, 22584 KB]
+New best heuristic value for ff: 57
+[g=9, 19 evaluated, 8 expanded, t=0.00611607s, 22584 KB]
+New best heuristic value for ff: 56
+[g=14, 36 evaluated, 15 expanded, t=0.00714577s, 22584 KB]
+New best heuristic value for ff: 55
+[g=21, 45 evaluated, 19 expanded, t=0.00748183s, 22584 KB]
+New best heuristic value for ff: 53
+[g=23, 46 evaluated, 20 expanded, t=0.00766314s, 22584 KB]
+New best heuristic value for ff: 51
+[g=37, 98 evaluated, 41 expanded, t=0.00916421s, 22584 KB]
+New best heuristic value for ff: 50
+[g=39, 100 evaluated, 42 expanded, t=0.00927425s, 22584 KB]
+New best heuristic value for ff: 49
+[g=43, 104 evaluated, 44 expanded, t=0.00942324s, 22584 KB]
+New best heuristic value for ff: 47
+[g=45, 108 evaluated, 45 expanded, t=0.00955832s, 22584 KB]
+New best heuristic value for ff: 45
+[g=48, 110 evaluated, 46 expanded, t=0.00964037s, 22584 KB]
+New best heuristic value for ff: 42
+[g=51, 114 evaluated, 48 expanded, t=0.00977272s, 22584 KB]
+New best heuristic value for ff: 40
+[g=53, 117 evaluated, 49 expanded, t=0.00990948s, 22584 KB]
+New best heuristic value for ff: 39
+[g=59, 145 evaluated, 62 expanded, t=0.0106982s, 22584 KB]
+New best heuristic value for ff: 38
+[g=62, 151 evaluated, 65 expanded, t=0.0108891s, 22584 KB]
+New best heuristic value for ff: 37
+[g=64, 158 evaluated, 68 expanded, t=0.0111101s, 22584 KB]
+New best heuristic value for ff: 36
+[g=64, 159 evaluated, 68 expanded, t=0.0111696s, 22584 KB]
+New best heuristic value for ff: 35
+[g=68, 206 evaluated, 90 expanded, t=0.0123596s, 22584 KB]
+New best heuristic value for ff: 34
+[g=71, 209 evaluated, 92 expanded, t=0.012466s, 22584 KB]
+New best heuristic value for ff: 33
+[g=81, 239 evaluated, 105 expanded, t=0.0132187s, 22584 KB]
+New best heuristic value for ff: 32
+[g=103, 418 evaluated, 181 expanded, t=0.0176717s, 22584 KB]
+New best heuristic value for ff: 30
+[g=104, 421 evaluated, 182 expanded, t=0.0178371s, 22584 KB]
+New best heuristic value for ff: 29
+[g=113, 435 evaluated, 188 expanded, t=0.0183726s, 22584 KB]
+New best heuristic value for ff: 28
+[g=119, 447 evaluated, 193 expanded, t=0.0188544s, 22584 KB]
+New best heuristic value for ff: 27
+[g=129, 562 evaluated, 243 expanded, t=0.0217922s, 22584 KB]
+New best heuristic value for ff: 26
+[g=129, 585 evaluated, 254 expanded, t=0.0223947s, 22584 KB]
+New best heuristic value for ff: 25
+[g=133, 597 evaluated, 258 expanded, t=0.0227861s, 22584 KB]
+New best heuristic value for ff: 24
+[g=135, 600 evaluated, 259 expanded, t=0.0229371s, 22584 KB]
+New best heuristic value for ff: 23
+[g=147, 682 evaluated, 293 expanded, t=0.0249266s, 22584 KB]
+New best heuristic value for ff: 21
+[g=149, 684 evaluated, 294 expanded, t=0.0250396s, 22584 KB]
+New best heuristic value for ff: 19
+[g=152, 692 evaluated, 297 expanded, t=0.0252629s, 22584 KB]
+New best heuristic value for ff: 17
+[g=164, 811 evaluated, 349 expanded, t=0.0278955s, 22584 KB]
+New best heuristic value for ff: 16
+[g=174, 892 evaluated, 384 expanded, t=0.0297997s, 22584 KB]
+New best heuristic value for ff: 15
+[g=188, 963 evaluated, 418 expanded, t=0.0313307s, 22584 KB]
+New best heuristic value for ff: 13
+[g=206, 1045 evaluated, 454 expanded, t=0.0331102s, 22584 KB]
+New best heuristic value for ff: 12
+[g=212, 1131 evaluated, 497 expanded, t=0.0349435s, 22584 KB]
+New best heuristic value for ff: 9
+[g=213, 1133 evaluated, 498 expanded, t=0.0350739s, 22584 KB]
+New best heuristic value for ff: 7
+[g=241, 1649 evaluated, 744 expanded, t=0.0457974s, 22584 KB]
+New best heuristic value for ff: 4
+[g=264, 7247 evaluated, 3547 expanded, t=0.163936s, 22736 KB]
+New best heuristic value for ff: 2
+[g=266, 7251 evaluated, 3548 expanded, t=0.164084s, 22736 KB]
+New best heuristic value for ff: 0
+[g=268, 7252 evaluated, 3549 expanded, t=0.164131s, 22736 KB]
+Solution found!
+Actual search time: 0.15889s [t=0.164188s]
+move-tile-left tile11 row3 col3 col2 (1)
+move-tile-left tile1 row3 col4 col3 (0)
+move-tile-up tile8 row4 row3 col4 (3)
+move-tile-right tile10 row4 col3 col4 (2)
+move-tile-right tile4 row4 col2 col3 (2)
+move-tile-right tile15 row4 col1 col2 (2)
+move-tile-down tile3 row3 row4 col1 (1)
+move-tile-left tile11 row3 col2 col1 (1)
+move-tile-left tile1 row3 col3 col2 (0)
+move-tile-up tile4 row4 row3 col3 (2)
+move-tile-left tile10 row4 col4 col3 (2)
+move-tile-down tile8 row3 row4 col4 (3)
+move-tile-right tile4 row3 col3 col4 (2)
+move-tile-right tile1 row3 col2 col3 (0)
+move-tile-right tile11 row3 col1 col2 (1)
+move-tile-up tile3 row4 row3 col1 (1)
+move-tile-left tile15 row4 col2 col1 (2)
+move-tile-down tile11 row3 row4 col2 (1)
+move-tile-left tile1 row3 col3 col2 (0)
+move-tile-down tile14 row2 row3 col3 (2)
+move-tile-down tile12 row1 row2 col3 (3)
+move-tile-right tile2 row1 col2 col3 (1)
+move-tile-up tile6 row2 row1 col2 (2)
+move-tile-up tile1 row3 row2 col2 (0)
+move-tile-up tile11 row4 row3 col2 (1)
+move-tile-left tile10 row4 col3 col2 (2)
+move-tile-down tile14 row3 row4 col3 (2)
+move-tile-down tile12 row2 row3 col3 (3)
+move-tile-left tile13 row2 col4 col3 (1)
+move-tile-up tile4 row3 row2 col4 (2)
+move-tile-right tile12 row3 col3 col4 (3)
+move-tile-right tile11 row3 col2 col3 (1)
+move-tile-up tile10 row4 row3 col2 (2)
+move-tile-left tile14 row4 col3 col2 (2)
+move-tile-down tile11 row3 row4 col3 (1)
+move-tile-down tile13 row2 row3 col3 (1)
+move-tile-down tile2 row1 row2 col3 (1)
+move-tile-left tile7 row1 col4 col3 (1)
+move-tile-up tile4 row2 row1 col4 (2)
+move-tile-right tile2 row2 col3 col4 (1)
+move-tile-right tile1 row2 col2 col3 (0)
+move-tile-right tile5 row2 col1 col2 (1)
+move-tile-up tile3 row3 row2 col1 (1)
+move-tile-left tile10 row3 col2 col1 (2)
+move-tile-left tile13 row3 col3 col2 (1)
+move-tile-up tile11 row4 row3 col3 (1)
+move-tile-right tile14 row4 col2 col3 (2)
+move-tile-down tile13 row3 row4 col2 (1)
+move-tile-right tile10 row3 col1 col2 (2)
+move-tile-up tile15 row4 row3 col1 (2)
+move-tile-left tile13 row4 col2 col1 (1)
+move-tile-left tile14 row4 col3 col2 (2)
+move-tile-down tile11 row3 row4 col3 (1)
+move-tile-down tile1 row2 row3 col3 (0)
+move-tile-left tile2 row2 col4 col3 (1)
+move-tile-up tile12 row3 row2 col4 (3)
+move-tile-up tile8 row4 row3 col4 (3)
+move-tile-right tile11 row4 col3 col4 (1)
+move-tile-down tile1 row3 row4 col3 (0)
+move-tile-left tile8 row3 col4 col3 (3)
+move-tile-down tile12 row2 row3 col4 (3)
+move-tile-right tile2 row2 col3 col4 (1)
+move-tile-up tile8 row3 row2 col3 (3)
+move-tile-up tile1 row4 row3 col3 (0)
+move-tile-left tile11 row4 col4 col3 (1)
+move-tile-down tile12 row3 row4 col4 (3)
+move-tile-down tile2 row2 row3 col4 (1)
+move-tile-right tile8 row2 col3 col4 (3)
+move-tile-right tile5 row2 col2 col3 (1)
+move-tile-right tile3 row2 col1 col2 (1)
+move-tile-up tile15 row3 row2 col1 (2)
+move-tile-left tile10 row3 col2 col1 (2)
+move-tile-left tile1 row3 col3 col2 (0)
+move-tile-left tile2 row3 col4 col3 (1)
+move-tile-up tile12 row4 row3 col4 (3)
+move-tile-right tile11 row4 col3 col4 (1)
+move-tile-down tile2 row3 row4 col3 (1)
+move-tile-right tile1 row3 col2 col3 (0)
+move-tile-right tile10 row3 col1 col2 (2)
+move-tile-down tile15 row2 row3 col1 (2)
+move-tile-left tile3 row2 col2 col1 (1)
+move-tile-left tile5 row2 col3 col2 (1)
+move-tile-up tile1 row3 row2 col3 (0)
+move-tile-right tile10 row3 col2 col3 (2)
+move-tile-right tile15 row3 col1 col2 (2)
+move-tile-down tile3 row2 row3 col1 (1)
+move-tile-left tile5 row2 col2 col1 (1)
+move-tile-up tile15 row3 row2 col2 (2)
+move-tile-left tile10 row3 col3 col2 (2)
+move-tile-down tile1 row2 row3 col3 (0)
+move-tile-right tile15 row2 col2 col3 (2)
+move-tile-right tile5 row2 col1 col2 (1)
+move-tile-up tile3 row3 row2 col1 (1)
+move-tile-left tile10 row3 col2 col1 (2)
+move-tile-left tile1 row3 col3 col2 (0)
+move-tile-up tile2 row4 row3 col3 (1)
+move-tile-right tile14 row4 col2 col3 (2)
+move-tile-down tile1 row3 row4 col2 (0)
+move-tile-left tile2 row3 col3 col2 (1)
+move-tile-down tile15 row2 row3 col3 (2)
+move-tile-right tile5 row2 col2 col3 (1)
+move-tile-up tile2 row3 row2 col2 (1)
+move-tile-up tile1 row4 row3 col2 (0)
+move-tile-left tile14 row4 col3 col2 (2)
+move-tile-down tile15 row3 row4 col3 (2)
+move-tile-right tile1 row3 col2 col3 (0)
+move-tile-down tile2 row2 row3 col2 (1)
+move-tile-left tile5 row2 col3 col2 (1)
+move-tile-up tile1 row3 row2 col3 (0)
+move-tile-right tile2 row3 col2 col3 (1)
+move-tile-right tile10 row3 col1 col2 (2)
+move-tile-down tile3 row2 row3 col1 (1)
+move-tile-left tile5 row2 col2 col1 (1)
+move-tile-left tile1 row2 col3 col2 (0)
+move-tile-up tile2 row3 row2 col3 (1)
+move-tile-right tile10 row3 col2 col3 (2)
+move-tile-right tile3 row3 col1 col2 (1)
+move-tile-down tile5 row2 row3 col1 (1)
+move-tile-left tile1 row2 col2 col1 (0)
+move-tile-up tile3 row3 row2 col2 (1)
+move-tile-left tile10 row3 col3 col2 (2)
+move-tile-down tile2 row2 row3 col3 (1)
+move-tile-right tile3 row2 col2 col3 (1)
+move-tile-right tile1 row2 col1 col2 (0)
+move-tile-up tile5 row3 row2 col1 (1)
+move-tile-left tile10 row3 col2 col1 (2)
+move-tile-left tile2 row3 col3 col2 (1)
+move-tile-down tile3 row2 row3 col3 (1)
+move-tile-right tile1 row2 col2 col3 (0)
+move-tile-up tile2 row3 row2 col2 (1)
+move-tile-right tile10 row3 col1 col2 (2)
+move-tile-down tile5 row2 row3 col1 (1)
+move-tile-left tile2 row2 col2 col1 (1)
+move-tile-left tile1 row2 col3 col2 (0)
+move-tile-down tile7 row1 row2 col3 (1)
+move-tile-right tile6 row1 col2 col3 (2)
+move-tile-up tile1 row2 row1 col2 (0)
+move-tile-right tile2 row2 col1 col2 (1)
+move-tile-down tile9 row1 row2 col1 (2)
+move-tile-left tile1 row1 col2 col1 (0)
+move-tile-left tile6 row1 col3 col2 (2)
+move-tile-up tile7 row2 row1 col3 (1)
+move-tile-right tile2 row2 col2 col3 (1)
+move-tile-down tile6 row1 row2 col2 (2)
+move-tile-left tile7 row1 col3 col2 (1)
+move-tile-up tile2 row2 row1 col3 (1)
+move-tile-up tile3 row3 row2 col3 (1)
+move-tile-right tile10 row3 col2 col3 (2)
+move-tile-right tile5 row3 col1 col2 (1)
+move-tile-down tile9 row2 row3 col1 (2)
+move-tile-down tile1 row1 row2 col1 (0)
+move-tile-left tile7 row1 col2 col1 (1)
+move-tile-left tile2 row1 col3 col2 (1)
+move-tile-up tile3 row2 row1 col3 (1)
+move-tile-right tile6 row2 col2 col3 (2)
+move-tile-up tile5 row3 row2 col2 (1)
+move-tile-left tile10 row3 col3 col2 (2)
+move-tile-down tile6 row2 row3 col3 (2)
+move-tile-down tile3 row1 row2 col3 (1)
+move-tile-right tile2 row1 col2 col3 (1)
+move-tile-right tile7 row1 col1 col2 (1)
+move-tile-up tile1 row2 row1 col1 (0)
+move-tile-left tile5 row2 col2 col1 (1)
+move-tile-down tile7 row1 row2 col2 (1)
+move-tile-left tile2 row1 col3 col2 (1)
+move-tile-up tile3 row2 row1 col3 (1)
+move-tile-up tile6 row3 row2 col3 (2)
+move-tile-right tile10 row3 col2 col3 (2)
+move-tile-down tile7 row2 row3 col2 (1)
+move-tile-left tile6 row2 col3 col2 (2)
+move-tile-up tile10 row3 row2 col3 (2)
+move-tile-right tile7 row3 col2 col3 (1)
+move-tile-up tile14 row4 row3 col2 (2)
+move-tile-left tile15 row4 col3 col2 (2)
+move-tile-left tile11 row4 col4 col3 (1)
+move-tile-down tile12 row3 row4 col4 (3)
+move-tile-right tile7 row3 col3 col4 (1)
+move-tile-up tile11 row4 row3 col3 (1)
+move-tile-right tile15 row4 col2 col3 (2)
+move-tile-down tile14 row3 row4 col2 (2)
+move-tile-left tile11 row3 col3 col2 (1)
+move-tile-left tile7 row3 col4 col3 (1)
+move-tile-up tile12 row4 row3 col4 (3)
+move-tile-right tile15 row4 col3 col4 (2)
+move-tile-down tile7 row3 row4 col3 (1)
+move-tile-down tile10 row2 row3 col3 (2)
+move-tile-right tile6 row2 col2 col3 (2)
+move-tile-up tile11 row3 row2 col2 (1)
+move-tile-left tile10 row3 col3 col2 (2)
+move-tile-up tile7 row4 row3 col3 (1)
+move-tile-right tile14 row4 col2 col3 (2)
+move-tile-down tile10 row3 row4 col2 (2)
+move-tile-down tile11 row2 row3 col2 (1)
+move-tile-left tile6 row2 col3 col2 (2)
+move-tile-up tile7 row3 row2 col3 (1)
+move-tile-right tile11 row3 col2 col3 (1)
+move-tile-up tile10 row4 row3 col2 (2)
+move-tile-left tile14 row4 col3 col2 (2)
+move-tile-left tile15 row4 col4 col3 (2)
+Plan length: 199 step(s).
+Plan cost: 268
+Expanded 3550 state(s).
+Reopened 0 state(s).
+Evaluated 7253 state(s).
+Evaluations: 7253
+Generated 11106 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 7253
+Int hash set load factor: 7253/8192 = 0.885376
+Int hash set resizes: 13
+Search time: 0.159073s
+Total time: 0.164195s
+Solution found.
+Peak memory: 22736 KB
+Remove intermediate file output.sas
+search exit code: 0

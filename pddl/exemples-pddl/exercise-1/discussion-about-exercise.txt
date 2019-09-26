@@ -1,0 +1,2 @@
+
+Foi possível obter uma solução para todas as variações de heurística, com uma razoável qualidade em relação a tempo e número de estados gerados. No entanto existe uma pequena diferença para a quantidade de estados gerados em relação a cada heurística.

@@ -1,0 +1,369 @@
+emanoel@pc:~/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward$ ./fast-downward.py --build release64 exemples-pddl/exercise-1/puzzle.pddl exemples-pddl/exercise-1/puzzle01.pddl --heuristic "h=add()" --search "eager_greedy([h])"
+INFO     Running translator.
+INFO     translator input: ['exemples-pddl/exercise-1/puzzle.pddl', 'exemples-pddl/exercise-1/puzzle01.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 59.97s
+INFO     translator memory limit: 1953 MB
+INFO     callstring: /usr/bin/python /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release64/bin/translate/translate.py exemples-pddl/exercise-1/puzzle.pddl exemples-pddl/exercise-1/puzzle01.pddl
+time limit 59.97 -> (60, 60)
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 49 rules.
+Computing model... [0.020s CPU, 0.030s wall-clock]
+1052 relevant atoms
+1256 auxiliary atoms
+2308 final queue length
+3508 total queue pushes
+Completing instantiation... [0.040s CPU, 0.039s wall-clock]
+Instantiating: [0.070s CPU, 0.074s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.010s CPU, 0.004s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.010s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.002s wall-clock]
+Translating task: [0.030s CPU, 0.027s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+16 propositions removed
+Detecting unreachable propositions: [0.020s CPU, 0.018s wall-clock]
+Reordering and filtering variables...
+16 of 16 variables necessary.
+0 of 16 mutex groups necessary.
+720 of 720 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.004s wall-clock]
+Translator variables: 16
+Translator derived variables: 0
+Translator facts: 256
+Translator goal facts: 15
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 720
+Translator axioms: 0
+Translator task size: 3887
+Translator peak memory: 39296 KB
+Writing output... [0.010s CPU, 0.005s wall-clock]
+Done! [0.140s CPU, 0.143s wall-clock]
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--heuristic', 'h=add()', '--search', 'eager_greedy([h])']
+INFO     search time limit: 59.8s
+INFO     search memory limit: 1953 MB
+INFO     search executable: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release64/bin/downward
+INFO     callstring: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release64/bin/downward --heuristic 'h=add()' --search 'eager_greedy([h])' --internal-plan-file sas_plan < output.sas
+time limit 59.80 -> (60, 60)
+reading input... [t=3.8639e-05s]
+done reading input! [t=0.00236327s]
+packing state variables...done! [t=0.00237452s]
+Variables: 16
+FactPairs: 256
+Bytes per state: 8
+Building successor generator...done! [t=0.0026958s]
+peak memory difference for root successor generator creation: 144 KB
+time for root successor generation creation: 0.000245972s
+done initializing global data [t=0.00274657s]
+Simplifying 1440 unary operators... done! [1440 unary operators]
+Initializing additive heuristic...
+Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for add: 88
+[g=0, 1 evaluated, 0 expanded, t=0.00395579s, 5524 KB]
+Initial heuristic value for add: 88
+pruning method: none
+New best heuristic value for add: 84
+[g=1, 4 evaluated, 1 expanded, t=0.00408943s, 5524 KB]
+New best heuristic value for add: 81
+[g=5, 48 evaluated, 18 expanded, t=0.00524432s, 5524 KB]
+New best heuristic value for add: 80
+[g=16, 177 evaluated, 68 expanded, t=0.00849949s, 5524 KB]
+New best heuristic value for add: 78
+[g=17, 179 evaluated, 69 expanded, t=0.0085933s, 5524 KB]
+New best heuristic value for add: 75
+[g=19, 219 evaluated, 84 expanded, t=0.00962196s, 5524 KB]
+New best heuristic value for add: 74
+[g=22, 303 evaluated, 116 expanded, t=0.0120003s, 5524 KB]
+New best heuristic value for add: 67
+[g=23, 305 evaluated, 117 expanded, t=0.0122612s, 5524 KB]
+New best heuristic value for add: 66
+[g=24, 309 evaluated, 118 expanded, t=0.0125603s, 5524 KB]
+New best heuristic value for add: 65
+[g=38, 383 evaluated, 146 expanded, t=0.0150715s, 5524 KB]
+New best heuristic value for add: 63
+[g=52, 461 evaluated, 175 expanded, t=0.017057s, 5524 KB]
+New best heuristic value for add: 60
+[g=56, 476 evaluated, 180 expanded, t=0.0174896s, 5524 KB]
+New best heuristic value for add: 56
+[g=57, 1527 evaluated, 589 expanded, t=0.0428755s, 5524 KB]
+New best heuristic value for add: 54
+[g=58, 1529 evaluated, 590 expanded, t=0.0430112s, 5524 KB]
+New best heuristic value for add: 51
+[g=67, 2037 evaluated, 786 expanded, t=0.0550503s, 5524 KB]
+New best heuristic value for add: 49
+[g=78, 2232 evaluated, 857 expanded, t=0.0611447s, 5524 KB]
+New best heuristic value for add: 47
+[g=84, 2269 evaluated, 871 expanded, t=0.0621935s, 5524 KB]
+New best heuristic value for add: 44
+[g=93, 2558 evaluated, 982 expanded, t=0.0685888s, 5524 KB]
+New best heuristic value for add: 43
+[g=96, 2582 evaluated, 991 expanded, t=0.069224s, 5524 KB]
+New best heuristic value for add: 41
+[g=114, 2778 evaluated, 1063 expanded, t=0.0736577s, 5524 KB]
+New best heuristic value for add: 40
+[g=128, 3006 evaluated, 1149 expanded, t=0.0790844s, 5524 KB]
+New best heuristic value for add: 39
+[g=129, 3008 evaluated, 1150 expanded, t=0.0792075s, 5524 KB]
+New best heuristic value for add: 35
+[g=130, 3012 evaluated, 1151 expanded, t=0.0793483s, 5524 KB]
+New best heuristic value for add: 32
+[g=131, 3015 evaluated, 1152 expanded, t=0.0794626s, 5524 KB]
+New best heuristic value for add: 27
+[g=136, 3088 evaluated, 1181 expanded, t=0.0812002s, 5524 KB]
+New best heuristic value for add: 25
+[g=137, 3091 evaluated, 1182 expanded, t=0.081311s, 5524 KB]
+New best heuristic value for add: 24
+[g=138, 3105 evaluated, 1187 expanded, t=0.0816641s, 5524 KB]
+New best heuristic value for add: 20
+[g=139, 3107 evaluated, 1188 expanded, t=0.0817518s, 5524 KB]
+New best heuristic value for add: 19
+[g=140, 3110 evaluated, 1189 expanded, t=0.0818542s, 5524 KB]
+New best heuristic value for add: 17
+[g=148, 3160 evaluated, 1211 expanded, t=0.082974s, 5524 KB]
+New best heuristic value for add: 13
+[g=147, 3351 evaluated, 1295 expanded, t=0.0867861s, 5524 KB]
+New best heuristic value for add: 11
+[g=148, 3354 evaluated, 1296 expanded, t=0.0868758s, 5524 KB]
+New best heuristic value for add: 10
+[g=149, 3355 evaluated, 1297 expanded, t=0.0869156s, 5524 KB]
+New best heuristic value for add: 6
+[g=188, 3707 evaluated, 1439 expanded, t=0.0946816s, 5524 KB]
+New best heuristic value for add: 3
+[g=189, 3710 evaluated, 1440 expanded, t=0.0950593s, 5524 KB]
+New best heuristic value for add: 1
+[g=190, 3711 evaluated, 1441 expanded, t=0.0951798s, 5524 KB]
+New best heuristic value for add: 0
+[g=191, 3714 evaluated, 1442 expanded, t=0.0953055s, 5524 KB]
+Solution found!
+Actual search time: 0.0914604s [t=0.0954632s]
+move-tile-left tile11 row3 col3 col2 (1)
+move-tile-down tile14 row2 row3 col3 (1)
+move-tile-left tile13 row2 col4 col3 (1)
+move-tile-up tile1 row3 row2 col4 (1)
+move-tile-right tile14 row3 col3 col4 (1)
+move-tile-down tile13 row2 row3 col3 (1)
+move-tile-down tile12 row1 row2 col3 (1)
+move-tile-right tile2 row1 col2 col3 (1)
+move-tile-up tile6 row2 row1 col2 (1)
+move-tile-up tile11 row3 row2 col2 (1)
+move-tile-left tile13 row3 col3 col2 (1)
+move-tile-down tile12 row2 row3 col3 (1)
+move-tile-right tile11 row2 col2 col3 (1)
+move-tile-down tile6 row1 row2 col2 (1)
+move-tile-left tile2 row1 col3 col2 (1)
+move-tile-up tile11 row2 row1 col3 (1)
+move-tile-left tile1 row2 col4 col3 (1)
+move-tile-up tile14 row3 row2 col4 (1)
+move-tile-right tile12 row3 col3 col4 (1)
+move-tile-up tile10 row4 row3 col3 (1)
+move-tile-right tile4 row4 col2 col3 (1)
+move-tile-down tile13 row3 row4 col2 (1)
+move-tile-left tile10 row3 col3 col2 (1)
+move-tile-down tile1 row2 row3 col3 (1)
+move-tile-down tile11 row1 row2 col3 (1)
+move-tile-right tile2 row1 col2 col3 (1)
+move-tile-up tile6 row2 row1 col2 (1)
+move-tile-left tile11 row2 col3 col2 (1)
+move-tile-up tile1 row3 row2 col3 (1)
+move-tile-right tile10 row3 col2 col3 (1)
+move-tile-down tile11 row2 row3 col2 (1)
+move-tile-down tile6 row1 row2 col2 (1)
+move-tile-left tile2 row1 col3 col2 (1)
+move-tile-up tile1 row2 row1 col3 (1)
+move-tile-left tile14 row2 col4 col3 (1)
+move-tile-up tile12 row3 row2 col4 (1)
+move-tile-right tile10 row3 col3 col4 (1)
+move-tile-right tile11 row3 col2 col3 (1)
+move-tile-down tile6 row2 row3 col2 (1)
+move-tile-left tile14 row2 col3 col2 (1)
+move-tile-up tile11 row3 row2 col3 (1)
+move-tile-left tile10 row3 col4 col3 (1)
+move-tile-down tile12 row2 row3 col4 (1)
+move-tile-right tile11 row2 col3 col4 (1)
+move-tile-right tile14 row2 col2 col3 (1)
+move-tile-up tile6 row3 row2 col2 (1)
+move-tile-left tile10 row3 col3 col2 (1)
+move-tile-down tile14 row2 row3 col3 (1)
+move-tile-left tile11 row2 col4 col3 (1)
+move-tile-up tile12 row3 row2 col4 (1)
+move-tile-up tile8 row4 row3 col4 (1)
+move-tile-right tile4 row4 col3 col4 (1)
+move-tile-down tile14 row3 row4 col3 (1)
+move-tile-down tile11 row2 row3 col3 (1)
+move-tile-left tile12 row2 col4 col3 (1)
+move-tile-up tile8 row3 row2 col4 (1)
+move-tile-up tile4 row4 row3 col4 (1)
+move-tile-right tile14 row4 col3 col4 (1)
+move-tile-down tile11 row3 row4 col3 (1)
+move-tile-down tile12 row2 row3 col3 (1)
+move-tile-left tile8 row2 col4 col3 (1)
+move-tile-up tile4 row3 row2 col4 (1)
+move-tile-right tile12 row3 col3 col4 (1)
+move-tile-right tile10 row3 col2 col3 (1)
+move-tile-right tile3 row3 col1 col2 (1)
+move-tile-down tile5 row2 row3 col1 (1)
+move-tile-left tile6 row2 col2 col1 (1)
+move-tile-up tile3 row3 row2 col2 (1)
+move-tile-left tile10 row3 col3 col2 (1)
+move-tile-down tile8 row2 row3 col3 (1)
+move-tile-right tile3 row2 col2 col3 (1)
+move-tile-down tile2 row1 row2 col2 (1)
+move-tile-left tile1 row1 col3 col2 (1)
+move-tile-up tile3 row2 row1 col3 (1)
+move-tile-up tile8 row3 row2 col3 (1)
+move-tile-right tile10 row3 col2 col3 (1)
+move-tile-down tile2 row2 row3 col2 (1)
+move-tile-right tile6 row2 col1 col2 (1)
+move-tile-up tile5 row3 row2 col1 (1)
+move-tile-left tile2 row3 col2 col1 (1)
+move-tile-left tile10 row3 col3 col2 (1)
+move-tile-up tile11 row4 row3 col3 (1)
+move-tile-right tile13 row4 col2 col3 (1)
+move-tile-right tile15 row4 col1 col2 (1)
+move-tile-down tile2 row3 row4 col1 (1)
+move-tile-down tile5 row2 row3 col1 (1)
+move-tile-down tile9 row1 row2 col1 (1)
+move-tile-left tile1 row1 col2 col1 (1)
+move-tile-up tile6 row2 row1 col2 (1)
+move-tile-right tile9 row2 col1 col2 (1)
+move-tile-up tile5 row3 row2 col1 (1)
+move-tile-left tile10 row3 col2 col1 (1)
+move-tile-up tile15 row4 row3 col2 (1)
+move-tile-left tile13 row4 col3 col2 (1)
+move-tile-down tile11 row3 row4 col3 (1)
+move-tile-right tile15 row3 col2 col3 (1)
+move-tile-down tile9 row2 row3 col2 (1)
+move-tile-left tile8 row2 col3 col2 (1)
+move-tile-up tile15 row3 row2 col3 (1)
+move-tile-up tile11 row4 row3 col3 (1)
+move-tile-right tile13 row4 col2 col3 (1)
+move-tile-down tile9 row3 row4 col2 (1)
+move-tile-left tile11 row3 col3 col2 (1)
+move-tile-down tile15 row2 row3 col3 (1)
+move-tile-right tile8 row2 col2 col3 (1)
+move-tile-up tile11 row3 row2 col2 (1)
+move-tile-up tile9 row4 row3 col2 (1)
+move-tile-left tile13 row4 col3 col2 (1)
+move-tile-down tile15 row3 row4 col3 (1)
+move-tile-right tile9 row3 col2 col3 (1)
+move-tile-down tile11 row2 row3 col2 (1)
+move-tile-left tile8 row2 col3 col2 (1)
+move-tile-up tile9 row3 row2 col3 (1)
+move-tile-right tile11 row3 col2 col3 (1)
+move-tile-right tile10 row3 col1 col2 (1)
+move-tile-down tile5 row2 row3 col1 (1)
+move-tile-left tile8 row2 col2 col1 (1)
+move-tile-left tile9 row2 col3 col2 (1)
+move-tile-up tile11 row3 row2 col3 (1)
+move-tile-right tile10 row3 col2 col3 (1)
+move-tile-down tile9 row2 row3 col2 (1)
+move-tile-right tile8 row2 col1 col2 (1)
+move-tile-up tile5 row3 row2 col1 (1)
+move-tile-left tile9 row3 col2 col1 (1)
+move-tile-left tile10 row3 col3 col2 (1)
+move-tile-down tile11 row2 row3 col3 (1)
+move-tile-right tile8 row2 col2 col3 (1)
+move-tile-down tile6 row1 row2 col2 (1)
+move-tile-left tile3 row1 col3 col2 (1)
+move-tile-left tile7 row1 col4 col3 (1)
+move-tile-up tile4 row2 row1 col4 (1)
+move-tile-right tile8 row2 col3 col4 (1)
+move-tile-down tile7 row1 row2 col3 (1)
+move-tile-right tile3 row1 col2 col3 (1)
+move-tile-up tile6 row2 row1 col2 (1)
+move-tile-right tile5 row2 col1 col2 (1)
+move-tile-up tile9 row3 row2 col1 (1)
+move-tile-up tile2 row4 row3 col1 (1)
+move-tile-left tile13 row4 col2 col1 (1)
+move-tile-down tile10 row3 row4 col2 (1)
+move-tile-right tile2 row3 col1 col2 (1)
+move-tile-down tile9 row2 row3 col1 (1)
+move-tile-left tile5 row2 col2 col1 (1)
+move-tile-up tile2 row3 row2 col2 (1)
+move-tile-up tile10 row4 row3 col2 (1)
+move-tile-left tile15 row4 col3 col2 (1)
+move-tile-left tile14 row4 col4 col3 (1)
+move-tile-down tile12 row3 row4 col4 (1)
+move-tile-right tile11 row3 col3 col4 (1)
+move-tile-up tile14 row4 row3 col3 (1)
+move-tile-right tile15 row4 col2 col3 (1)
+move-tile-down tile10 row3 row4 col2 (1)
+move-tile-left tile14 row3 col3 col2 (1)
+move-tile-left tile11 row3 col4 col3 (1)
+move-tile-up tile12 row4 row3 col4 (1)
+move-tile-right tile15 row4 col3 col4 (1)
+move-tile-right tile10 row4 col2 col3 (1)
+move-tile-down tile14 row3 row4 col2 (1)
+move-tile-left tile11 row3 col3 col2 (1)
+move-tile-up tile10 row4 row3 col3 (1)
+move-tile-left tile15 row4 col4 col3 (1)
+move-tile-down tile12 row3 row4 col4 (1)
+move-tile-down tile8 row2 row3 col4 (1)
+move-tile-right tile7 row2 col3 col4 (1)
+move-tile-up tile10 row3 row2 col3 (1)
+move-tile-right tile11 row3 col2 col3 (1)
+move-tile-down tile2 row2 row3 col2 (1)
+move-tile-left tile10 row2 col3 col2 (1)
+move-tile-left tile7 row2 col4 col3 (1)
+move-tile-up tile8 row3 row2 col4 (1)
+move-tile-right tile11 row3 col3 col4 (1)
+move-tile-right tile2 row3 col2 col3 (1)
+move-tile-down tile10 row2 row3 col2 (1)
+move-tile-down tile6 row1 row2 col2 (1)
+move-tile-left tile3 row1 col3 col2 (1)
+move-tile-up tile7 row2 row1 col3 (1)
+move-tile-up tile2 row3 row2 col3 (1)
+move-tile-right tile10 row3 col2 col3 (1)
+move-tile-down tile6 row2 row3 col2 (1)
+move-tile-left tile2 row2 col3 col2 (1)
+move-tile-down tile7 row1 row2 col3 (1)
+move-tile-right tile3 row1 col2 col3 (1)
+move-tile-up tile2 row2 row1 col2 (1)
+move-tile-up tile6 row3 row2 col2 (1)
+move-tile-left tile10 row3 col3 col2 (1)
+move-tile-left tile11 row3 col4 col3 (1)
+move-tile-up tile12 row4 row3 col4 (1)
+Plan length: 187 step(s).
+Plan cost: 187
+Expanded 1443 state(s).
+Reopened 0 state(s).
+Evaluated 3715 state(s).
+Evaluations: 3715
+Generated 5307 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 3715
+Search time: 0.0915862s
+Total time: 0.0954715s
+Solution found.
+Peak memory: 5524 KB

@@ -1,0 +1,192 @@
+emanoel@pc:~/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward$ ./fast-downward.py --build release64 exemples-pddl/exercise-3/puzzle.pddl exemples-pddl/exercise-3/puzzle03.pddl --heuristic "h=add()" --search "eager_greedy([h])"
+INFO     Running translator.
+INFO     translator input: ['exemples-pddl/exercise-3/puzzle.pddl', 'exemples-pddl/exercise-3/puzzle03.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 59.98s
+INFO     translator memory limit: 1953 MB
+INFO     callstring: /usr/bin/python /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release64/bin/translate/translate.py exemples-pddl/exercise-3/puzzle.pddl exemples-pddl/exercise-3/puzzle03.pddl
+time limit 59.98 -> (60, 60)
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.004s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 68 rules.
+Computing model... [0.030s CPU, 0.034s wall-clock]
+1547 relevant atoms
+1874 auxiliary atoms
+3421 final queue length
+5341 total queue pushes
+Completing instantiation... [0.060s CPU, 0.054s wall-clock]
+Instantiating: [0.100s CPU, 0.095s wall-clock]
+Computing fact groups...
+Finding invariants...
+9 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+15 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.010s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.009s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.003s wall-clock]
+Translating task: [0.060s CPU, 0.054s wall-clock]
+240 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+16 propositions removed
+Detecting unreachable propositions: [0.020s CPU, 0.025s wall-clock]
+Reordering and filtering variables...
+31 of 31 variables necessary.
+0 of 16 mutex groups necessary.
+1200 of 1200 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.007s wall-clock]
+Translator variables: 31
+Translator derived variables: 0
+Translator facts: 286
+Translator goal facts: 15
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 1200
+Translator axioms: 0
+Translator task size: 6872
+Translator peak memory: 41788 KB
+Writing output... [0.010s CPU, 0.009s wall-clock]
+Done! [0.210s CPU, 0.207s wall-clock]
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--heuristic', 'h=add()', '--search', 'eager_greedy([h])']
+INFO     search time limit: 59.76s
+INFO     search memory limit: 1953 MB
+INFO     search executable: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release64/bin/downward
+INFO     callstring: /home/emanoel/desenvolvimento/repositorio/puzzle-solve/pddl/fast-downward/builds/release64/bin/downward --heuristic 'h=add()' --search 'eager_greedy([h])' --internal-plan-file sas_plan < output.sas
+time limit 59.76 -> (60, 60)
+reading input... [t=3.3109e-05s]
+done reading input! [t=0.00416606s]
+packing state variables...done! [t=0.00421703s]
+Variables: 31
+FactPairs: 286
+Bytes per state: 12
+Building successor generator...done! [t=0.00483925s]
+peak memory difference for root successor generator creation: 132 KB
+time for root successor generation creation: 0.000490102s
+done initializing global data [t=0.0048998s]
+Simplifying 2400 unary operators... done! [1860 unary operators]
+Initializing additive heuristic...
+Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for add: 32
+[g=0, 1 evaluated, 0 expanded, t=0.00696848s, 6148 KB]
+Initial heuristic value for add: 32
+pruning method: none
+New best heuristic value for add: 30
+[g=1, 2 evaluated, 1 expanded, t=0.00707355s, 6148 KB]
+New best heuristic value for add: 28
+[g=2, 22 evaluated, 2 expanded, t=0.00768555s, 6148 KB]
+New best heuristic value for add: 27
+[g=3, 46 evaluated, 3 expanded, t=0.00840109s, 6148 KB]
+New best heuristic value for add: 26
+[g=3, 50 evaluated, 3 expanded, t=0.00857389s, 6148 KB]
+New best heuristic value for add: 25
+[g=4, 76 evaluated, 4 expanded, t=0.00932875s, 6148 KB]
+New best heuristic value for add: 24
+[g=4, 84 evaluated, 4 expanded, t=0.00959987s, 6148 KB]
+New best heuristic value for add: 23
+[g=5, 114 evaluated, 5 expanded, t=0.0104835s, 6148 KB]
+New best heuristic value for add: 22
+[g=5, 126 evaluated, 5 expanded, t=0.0108647s, 6148 KB]
+New best heuristic value for add: 21
+[g=6, 158 evaluated, 6 expanded, t=0.0117945s, 6148 KB]
+New best heuristic value for add: 20
+[g=6, 177 evaluated, 6 expanded, t=0.0123655s, 6148 KB]
+New best heuristic value for add: 19
+[g=7, 210 evaluated, 7 expanded, t=0.0136686s, 6148 KB]
+New best heuristic value for add: 18
+[g=7, 243 evaluated, 7 expanded, t=0.0155525s, 6148 KB]
+New best heuristic value for add: 17
+[g=8, 277 evaluated, 8 expanded, t=0.0170994s, 6148 KB]
+New best heuristic value for add: 16
+[g=8, 320 evaluated, 8 expanded, t=0.0187804s, 6148 KB]
+New best heuristic value for add: 15
+[g=9, 354 evaluated, 9 expanded, t=0.0199652s, 6148 KB]
+New best heuristic value for add: 14
+[g=9, 413 evaluated, 9 expanded, t=0.0217218s, 6148 KB]
+New best heuristic value for add: 13
+[g=10, 442 evaluated, 10 expanded, t=0.0225306s, 6148 KB]
+New best heuristic value for add: 12
+[g=10, 521 evaluated, 10 expanded, t=0.0246144s, 6148 KB]
+New best heuristic value for add: 11
+[g=11, 525 evaluated, 11 expanded, t=0.0247814s, 6148 KB]
+New best heuristic value for add: 10
+[g=12, 659 evaluated, 12 expanded, t=0.028224s, 6148 KB]
+New best heuristic value for add: 9
+[g=13, 760 evaluated, 13 expanded, t=0.0308422s, 6148 KB]
+New best heuristic value for add: 8
+[g=14, 847 evaluated, 14 expanded, t=0.0330277s, 6148 KB]
+New best heuristic value for add: 7
+[g=15, 921 evaluated, 15 expanded, t=0.0347763s, 6148 KB]
+New best heuristic value for add: 6
+[g=16, 979 evaluated, 16 expanded, t=0.0361554s, 6148 KB]
+New best heuristic value for add: 5
+[g=17, 1027 evaluated, 17 expanded, t=0.037309s, 6148 KB]
+New best heuristic value for add: 4
+[g=18, 1062 evaluated, 18 expanded, t=0.0381215s, 6148 KB]
+New best heuristic value for add: 3
+[g=19, 1097 evaluated, 19 expanded, t=0.0389182s, 6148 KB]
+New best heuristic value for add: 2
+[g=20, 1119 evaluated, 20 expanded, t=0.0394344s, 6148 KB]
+New best heuristic value for add: 1
+[g=21, 1140 evaluated, 21 expanded, t=0.0399103s, 6148 KB]
+New best heuristic value for add: 0
+[g=22, 1165 evaluated, 22 expanded, t=0.0404268s, 6148 KB]
+Solution found!
+Actual search time: 0.0334939s [t=0.0405127s]
+remove-tile tile1 row3 col4 (1)
+remove-tile tile10 row4 col3 (1)
+remove-tile tile12 row1 col3 (1)
+remove-tile tile13 row2 col4 (1)
+remove-tile tile14 row2 col3 (1)
+remove-tile tile15 row4 col1 (1)
+remove-tile tile3 row3 col1 (1)
+remove-tile tile4 row4 col2 (1)
+remove-tile tile7 row1 col4 (1)
+remove-tile tile9 row1 col1 (1)
+insert-tile tile1 row1 col1 (1)
+insert-tile tile10 row3 col2 (1)
+insert-tile tile12 row3 col4 (1)
+insert-tile tile13 row4 col1 (1)
+insert-tile tile14 row4 col2 (1)
+insert-tile tile15 row4 col3 (1)
+insert-tile tile3 row1 col3 (1)
+insert-tile tile4 row1 col4 (1)
+insert-tile tile7 row2 col3 (1)
+remove-tile tile8 row4 col4 (1)
+insert-tile tile8 row2 col4 (1)
+insert-tile tile9 row3 col1 (1)
+Plan length: 22 step(s).
+Plan cost: 22
+Expanded 23 state(s).
+Reopened 0 state(s).
+Evaluated 1166 state(s).
+Evaluations: 1166
+Generated 1224 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 1166
+Search time: 0.0336094s
+Total time: 0.0405181s
+Solution found.
+Peak memory: 6148 KB

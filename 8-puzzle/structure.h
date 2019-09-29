@@ -14,7 +14,7 @@ struct State {
 
 struct ListNode {
     Node *currentNode;
-    struct Node *nextNode;
+    struct ListNode *nextNode;
 };
 
 struct Node {

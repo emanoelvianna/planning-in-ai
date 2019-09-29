@@ -1,3 +1,13 @@
+int isGoal(State const *testState, State const *goalState, int line, int column) {
+    while (line--) {
+        while (column--) {
+            if (testState->board[line][column] != goalState->board[line][column])
+                return 0;
+        }
+    }
+    return 1;
+}
+
 void showBoard(State *const state, int line, int column) {
     int i, j;
     for (i = 0; i < line; i++) {

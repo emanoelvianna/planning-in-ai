@@ -2,32 +2,27 @@ typedef struct Node Node;
 typedef struct State State;
 typedef struct Node Node;
 typedef struct ListNode ListNode;
-typedef struct NodeList NodeList;
 
-typedef enum Move {
+typedef enum Movement {
     UP, DOWN, LEFT, RIGHT, NOT_APPLICABLE
 } Movement;
+
 struct State {
     Movement action;
     int **board;
 };
 
 struct ListNode {
-    Node *currNode;
-    struct ListNode *prevNode;
-    struct ListNode *nextNode;
-};
-
-struct NodeList {
-    unsigned int nodeCount;
-    ListNode *head;
-    ListNode *tail;
+    State *currentNode;
+    struct State *nextNode;
 };
 
 struct Node {
-    unsigned int depth;
-    unsigned int heuristic;
+    unsigned int depth; // g
+    unsigned int heuristic; // h
     State *state;
     Node *parent;
-    NodeList *children;
+    ListNode *children;
 };
+
+

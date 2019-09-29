@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/emanoel/CLionProjects/8-puzzle/main.c" "/home/emanoel/CLionProjects/8-puzzle/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
+  "/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/main.c" "/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

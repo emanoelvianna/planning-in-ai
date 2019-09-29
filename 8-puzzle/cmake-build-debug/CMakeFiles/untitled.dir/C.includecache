@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/emanoel/CLionProjects/8-puzzle/algorithms/a-star.c
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/algorithms.c
 
-/home/emanoel/CLionProjects/8-puzzle/game.c
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/game.c
 
-/home/emanoel/CLionProjects/8-puzzle/main.c
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/main.c
 stdio.h
 -
 stdlib.h
 -
 structure.h
-/home/emanoel/CLionProjects/8-puzzle/structure.h
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/structure.h
 game.c
-/home/emanoel/CLionProjects/8-puzzle/game.c
-algorithms/a-star.c
-/home/emanoel/CLionProjects/8-puzzle/algorithms/a-star.c
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/game.c
+algorithms.c
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/algorithms.c
 
-/home/emanoel/CLionProjects/8-puzzle/structure.h
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/structure.h
 

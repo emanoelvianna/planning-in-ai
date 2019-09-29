@@ -11,7 +11,60 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd1e5cbb-82a0-4ab1-b629-d6b0b5ae69db" name="Default Changelist" comment="" />
+    <list default="true" id="dd1e5cbb-82a0-4ab1-b629-d6b0b5ae69db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/a-star.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structure.h" beforeDir="false" afterPath="$PROJECT_DIR$/structure.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/Classroom1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/discussion-about-exercise.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/puzzle.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/puzzle01.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/result-puzzle-to-additive-heuristic:.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/result-puzzle-to-heuristic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/result-weight-to-additive-heuristic:.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/result-weight-to-heuristic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/weight.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-1/weight01.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/discussion-about-exercise.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/puzzle.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/puzzle02.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/result-to-additive-heuristic:.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/result-to-heuristic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/result-weight-to-additive-heuristic:.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/result-weight-to-heuristic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/weight.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-2/weight01.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/discussion-about-exercise.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/puzzle.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/puzzle03.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/result-to-additive-heuristic:.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/result-to-heuristic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/result-weight-to-additive-heuristic:.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/result-weight-to-heuristic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/weight.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/exercise-3/weight01.pddl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pddl/exemples-pddl/general-discussion.txt" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +75,19 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1RToLpEaLmdOwp8zRc5d4dtouQT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,21 +120,22 @@
       <updated>1569700393409</updated>
       <workItem from="1569700394558" duration="107000" />
       <workItem from="1569700503197" duration="11079000" />
+      <workItem from="1569712743871" duration="10852000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/game.c</url>
-          <line>2</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

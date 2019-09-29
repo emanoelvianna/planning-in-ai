@@ -48,10 +48,10 @@ RM = /home/emanoel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6603.37/bi
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emanoel/CLionProjects/8-puzzle
+CMAKE_SOURCE_DIR = /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emanoel/CLionProjects/8-puzzle/cmake-build-debug
+CMAKE_BINARY_DIR = /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emanoel/CLionProjects/8-puzzle/cmake-build-debug/CMakeFiles /home/emanoel/CLionProjects/8-puzzle/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/cmake-build-debug/CMakeFiles /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emanoel/CLionProjects/8-puzzle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

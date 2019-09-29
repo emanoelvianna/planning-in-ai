@@ -34,8 +34,6 @@ int main() {
 
     processInputData(&initial, input, sizeOfInput, line, column);
     defineDefaultGoal(&goal, line, column);
-    showBoard(&initial, line, column);
-
     AStar(&initial, &goal, line, column);
 
     return 0;

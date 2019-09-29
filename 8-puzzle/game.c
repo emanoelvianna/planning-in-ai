@@ -8,7 +8,7 @@ int isGoal(State const *testState, State const *goalState, int line, int column)
     return 1;
 }
 
-void showBoard(State *const state, int line, int column) {
+void showBoard(State *state, int line, int column) {
     int i, j;
     for (i = 0; i < line; i++) {
         for (j = 0; j < column; j++) {
@@ -16,12 +16,16 @@ void showBoard(State *const state, int line, int column) {
         }
         printf("\n");
     }
+    printf("----------\n");
 }
 
-State *moveTile(State *state, Movement move) {
-    State *newState = malloc(sizeof(State));
+State *moveTile(State *state, Movement move, int line, int column) {
     int i, j;
-    int line, column;
+    int **m = malloc(line * sizeof(int *));
+    for (i = 0; i < line; ++i)
+        m[i] = malloc(column * sizeof(int));
+    State *newState = malloc(sizeof(State));
+    newState->board = m;
     for (i = 0; i < 3; ++i) {
         for (j = 0; j < 3; ++j) {
             if (state->board[i][j] == 0) {

@@ -1,2 +1,2 @@
-# puzzle-solve
-:game_die: this repository contains algorithms to solve puzzle
+# planning-in-ai
+:game_die: This repository contains algorithms to Planning in Artificial Intelligence

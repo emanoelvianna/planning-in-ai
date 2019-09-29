@@ -4,23 +4,6 @@
 #include "game.c"
 #include "algorithms.c"
 
-void defineDefaultGoal(State *const state, int line, int column) {
-    int **goal = malloc(line * sizeof(int *));
-    for (int i = 0; i < line; ++i)
-        goal[i] = malloc(column * sizeof(int));
-    goal[0][0] = 0;
-    goal[0][1] = 1;
-    goal[0][2] = 2;
-    goal[1][0] = 3;
-    goal[1][1] = 4;
-    goal[1][2] = 5;
-    goal[2][0] = 6;
-    goal[2][1] = 7;
-    goal[2][2] = 8;
-
-    state->board = goal;
-}
-
 void processInputData(State *const state, int input[], int sizeOfInput, int line, int column) {
     state->action = NOT_APPLICABLE;
     int i, j;

@@ -34,21 +34,30 @@ Node *createNode(State *state, Node *parent, unsigned int depth, unsigned int he
     return newNode;
 }
 
-ListNode *getChildren(State *current, Node *node) {
+void pushNode(ListNode **const list, Node *node) {
+
+}
+
+ListNode *getChildren(State *current, State *goal, Node *parent) {
     ListNode *children = NULL;
     State *valid = NULL;
+    Node *child = NULL;
 
     if ((valid = moveTile(current, UP))) {
-        children->currentNode = valid;
+        child = createNode(valid, parent, parent->depth + 1, manhattanHeuristic(valid, goal));
+        pushNode(&children, child);
     }
     if ((valid = moveTile(current, DOWN))) {
-        children->currentNode = valid;
+        child = createNode(valid, parent, parent->depth + 1, manhattanHeuristic(valid, goal));
+        pushNode(&children, child);
     }
     if (valid = moveTile(current, LEFT)) {
-        children->currentNode = valid;
+        child = createNode(valid, parent, parent->depth + 1, manhattanHeuristic(valid, goal));
+        pushNode(&children, child);
     }
     if (valid = moveTile(current, RIGHT)) {
-        children->currentNode = valid;
+        child = createNode(valid, parent, parent->depth + 1, manhattanHeuristic(valid, goal));
+        pushNode(&children, child);
     }
 
     return children;
@@ -62,6 +71,7 @@ void AStar(State *const initial, State *const goal) {
     int h = manhattanHeuristic(initial, goal);
     int f = g + h;
     Node *root = createNode(initial, NULL, g, h);
-    root->children = getChildren(initial, root);
+    root->children = getChildren(initial, goal, root);
 
+    // TODO: Explorar cada instancia ainda aberta e escolher a  menos custosa
 }

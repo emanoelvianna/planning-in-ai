@@ -13,8 +13,8 @@ struct State {
 };
 
 struct ListNode {
-    State *currentNode;
-    struct State *nextNode;
+    Node *currentNode;
+    struct Node *nextNode;
 };
 
 struct Node {

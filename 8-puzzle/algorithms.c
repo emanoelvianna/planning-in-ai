@@ -1,3 +1,7 @@
+int getTotalCost(Node *const node) {
+    return node->depth + node->heuristic;
+}
+
 int manhattanHeuristic(State *const current, State *const goal, int line, int column) {
     int sum = 0;
     for (int i = 0; i < line; i++) {
@@ -58,9 +62,15 @@ void printListNode(ListNode **const start, int line, int column) {
     while (ptr != NULL) {
         printf("Depth = %d\n", ptr->currentNode->depth);
         printf("Heuristic = %d\n", ptr->currentNode->heuristic);
-        showBoard(ptr->currentNode->state, line, column);
+        // showBoard(ptr->currentNode->state, line, column);
         ptr = ptr->nextNode;
     }
+}
+
+void printOfStateOfNode(Node *node, int line, int column) {
+    printf("Depth = %d\n", node->depth);
+    printf("Heuristic = %d\n", node->heuristic);
+    showBoard(node->state, line, column);
 }
 
 ListNode *getChildren(State *goal, Node *parent, int line, int column) {
@@ -87,28 +97,51 @@ ListNode *getChildren(State *goal, Node *parent, int line, int column) {
     return children;
 }
 
+void bubbleSort(ListNode **const start) {
+    int swapped;
+    ListNode *helper1;
+    ListNode *helper2 = NULL;
+    if ((*start) == NULL)
+        return;
+    do {
+        swapped = 0;
+        helper1 = (*start);
+        while (helper1->nextNode != helper2) {
+            if (getTotalCost(helper1->currentNode) > getTotalCost(helper1->nextNode->currentNode)) {
+                Node *helper = helper1->currentNode;
+                helper1->currentNode = helper1->nextNode->currentNode;
+                helper1->nextNode->currentNode = helper;
+                swapped = 1;
+            }
+            helper1 = helper1->nextNode;
+        }
+        helper2 = helper1;
+    } while (swapped);
+}
+
 void AStar(State *const initial, State *const goal, int line, int column) {
     ListNode *closed = NULL;
     ListNode *open = NULL;
     ListNode *children = NULL;
     Node *node = NULL;
 
-    if (!isGoal(initial, goal, line, column)) {
+    if (isGoal(initial, goal, line, column) == 0) {
         int g = 0;
         int h = manhattanHeuristic(initial, goal, line, column);
         int f = g + h;
         pushNode(&open, createNode(initial, NULL, g, h));
-        Node *root = open->currentNode;
         while (open != NULL) {
             node = open->currentNode;
             popNode(&open); // remove first element
-            if (isGoal(node->state, goal, line, column))
+            if (isGoal(node->state, goal, line, column) == 1)
                 break;
+            pushNode(&closed, node);
             children = getChildren(goal, node, line, column);
+            bubbleSort(&children);
             printListNode(&children, line, column);
+            printf("----------\n");
+            pushNode(&open, children->currentNode);
+            printOfStateOfNode(children->currentNode, line, column);
         }
-    } else {
-        // TODO: Estado inicial é o estado objetivo
     }
-    // TODO: Explorar cada instancia ainda aberta e escolher a  menos custosa
 }

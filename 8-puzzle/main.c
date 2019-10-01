@@ -23,9 +23,9 @@ void processInputData(State *const state, int input[], int sizeOfInput, int line
 }
 
 int main() {
-    int input[9] = {7, 2, 4,
-                    5, 0, 6,
-                    8, 3, 1};
+    int input[9] = {0, 2, 3,
+                    1, 4, 5,
+                    8, 7, 6};
     int sizeOfInput = 9;
     int line = 3;
     int column = 3;

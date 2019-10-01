@@ -41,6 +41,29 @@ void pushNode(ListNode **const start, Node *node) {
     }
 }
 
+void pushList(ListNode **const children, ListNode **const list) {
+    ListNode *ptr;
+    if ((*children) == NULL) {
+        return;
+    }
+    ptr = *children;
+    while (ptr != NULL) {
+        if ((*list) == NULL) {
+            ListNode *newNode;
+            newNode = (ListNode *) malloc(sizeof(ListNode));
+            newNode->currentNode = ptr->currentNode;
+            (*list) = newNode;
+        } else {
+            ListNode *newNode;
+            newNode = (ListNode *) malloc(sizeof(ListNode));
+            newNode->currentNode = ptr->currentNode;
+            newNode->nextNode = (*list);
+            (*list) = newNode;
+        }
+        ptr = ptr->nextNode;
+    }
+}
+
 int popNode(ListNode **const start) {
     ListNode *ptr;
     if (start == NULL)
@@ -62,7 +85,7 @@ void printListNode(ListNode **const start, int line, int column) {
     while (ptr != NULL) {
         printf("Depth = %d\n", ptr->currentNode->depth);
         printf("Heuristic = %d\n", ptr->currentNode->heuristic);
-        // showBoard(ptr->currentNode->state, line, column);
+        showBoard(ptr->currentNode->state, line, column);
         ptr = ptr->nextNode;
     }
 }
@@ -120,6 +143,7 @@ void bubbleSort(ListNode **const start) {
 }
 
 void AStar(State *const initial, State *const goal, int line, int column) {
+    int expansion = 1;
     ListNode *closed = NULL;
     ListNode *open = NULL;
     ListNode *children = NULL;
@@ -130,18 +154,24 @@ void AStar(State *const initial, State *const goal, int line, int column) {
         int h = manhattanHeuristic(initial, goal, line, column);
         int f = g + h;
         pushNode(&open, createNode(initial, NULL, g, h));
+        //printOfStateOfNode(open->currentNode, line, column);
         while (open != NULL) {
             node = open->currentNode;
             popNode(&open); // remove first element
-            if (isGoal(node->state, goal, line, column) == 1)
+            if (isGoal(node->state, goal, line, column) == 1) {
+                showBoard(node->state, line, column);
                 break;
+            }
             pushNode(&closed, node);
             children = getChildren(goal, node, line, column);
+            printf("%d\n", expansion++);
             bubbleSort(&children);
-            printListNode(&children, line, column);
-            printf("----------\n");
-            pushNode(&open, children->currentNode);
-            printOfStateOfNode(children->currentNode, line, column);
+            //printListNode(&children, line, column);
+            //printf("----------\n");
+            pushList(&children, &open);
+            bubbleSort(&open);
+            //pushNode(&open, children->currentNode);
+            //printOfStateOfNode(children->currentNode, line, column);
         }
     }
 }

@@ -15,12 +15,16 @@ stdio.h
 -
 stdlib.h
 -
-structure.h
-/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/structure.h
+model.h
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/model.h
 game.c
 /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/game.c
+service.c
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/service.c
 algorithms.c
 /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/algorithms.c
 
-/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/structure.h
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/model.h
+
+/home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/service.c
 

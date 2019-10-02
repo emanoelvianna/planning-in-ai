@@ -66,20 +66,3 @@ State *moveTile(State *state, Movement move, int line, int column) {
     free(newState);
     return NULL;
 }
-
-void defineDefaultGoal(State *const goal, int line, int column) {
-    int **state = malloc(line * sizeof(int *));
-    for (int i = 0; i < line; ++i)
-        state[i] = malloc(column * sizeof(int));
-    state[0][0] = 0;
-    state[0][1] = 1;
-    state[0][2] = 2;
-    state[1][0] = 3;
-    state[1][1] = 4;
-    state[1][2] = 5;
-    state[2][0] = 6;
-    state[2][1] = 7;
-    state[2][2] = 8;
-
-    goal->board = state;
-}

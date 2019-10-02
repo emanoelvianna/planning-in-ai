@@ -4,5 +4,6 @@
 CMakeFiles/untitled.dir/main.c.o: ../algorithms.c
 CMakeFiles/untitled.dir/main.c.o: ../game.c
 CMakeFiles/untitled.dir/main.c.o: ../main.c
-CMakeFiles/untitled.dir/main.c.o: ../structure.h
+CMakeFiles/untitled.dir/main.c.o: ../model.h
+CMakeFiles/untitled.dir/main.c.o: ../service.c
 

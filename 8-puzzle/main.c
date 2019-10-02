@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "structure.h"
+#include "model.h"
 #include "game.c"
+#include "service.c"
 #include "algorithms.c"
 
 void processInputData(State *const state, int input[], int sizeOfInput, int line, int column) {
@@ -39,7 +40,6 @@ int main() {
 
     processInputData(&initial, inputForInitial, sizeOfInput, line, column);
     processInputData(&goal, inputForGoal, sizeOfInput, line, column);
-    //defineDefaultGoal(&goal, line, column);
     AStar(&initial, &goal, line, column);
 
     return 0;

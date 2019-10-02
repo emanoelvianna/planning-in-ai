@@ -75,7 +75,8 @@
       <updated>1569700393409</updated>
       <workItem from="1569700394558" duration="107000" />
       <workItem from="1569700503197" duration="11079000" />
-      <workItem from="1569712743871" duration="50054000" />
+      <workItem from="1569712743871" duration="59423000" />
+      <workItem from="1569978730514" duration="5272000" />
     </task>
     <servers />
   </component>
@@ -87,21 +88,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/algorithms.c</url>
-          <line>162</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

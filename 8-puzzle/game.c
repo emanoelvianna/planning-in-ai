@@ -11,6 +11,7 @@ int isGoal(State const *testState, State const *goalState, int line, int column)
 }
 
 void showBoard(State *state, int line, int column) {
+    printf("----------\n");
     int i, j;
     for (i = 0; i < line; i++) {
         for (j = 0; j < column; j++) {
@@ -70,15 +71,15 @@ void defineDefaultGoal(State *const goal, int line, int column) {
     int **state = malloc(line * sizeof(int *));
     for (int i = 0; i < line; ++i)
         state[i] = malloc(column * sizeof(int));
-    state[0][0] = 1;
-    state[0][1] = 2;
-    state[0][2] = 3;
-    state[1][0] = 4;
-    state[1][1] = 0;
+    state[0][0] = 0;
+    state[0][1] = 1;
+    state[0][2] = 2;
+    state[1][0] = 3;
+    state[1][1] = 4;
     state[1][2] = 5;
-    state[2][0] = 8;
+    state[2][0] = 6;
     state[2][1] = 7;
-    state[2][2] = 6;
+    state[2][2] = 8;
 
     goal->board = state;
 }

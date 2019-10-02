@@ -23,17 +23,23 @@ void processInputData(State *const state, int input[], int sizeOfInput, int line
 }
 
 int main() {
-    int input[9] = {0, 2, 3,
-                    1, 4, 5,
-                    8, 7, 6};
+    int inputForInitial[9] = {1, 2, 5,
+                              3, 4, 0,
+                              6, 7, 8};
+
+    int inputForGoal[9] = {0, 1, 2,
+                           3, 4, 5,
+                           6, 7, 8};
+
     int sizeOfInput = 9;
     int line = 3;
     int column = 3;
     State initial;
     State goal;
 
-    processInputData(&initial, input, sizeOfInput, line, column);
-    defineDefaultGoal(&goal, line, column);
+    processInputData(&initial, inputForInitial, sizeOfInput, line, column);
+    processInputData(&goal, inputForGoal, sizeOfInput, line, column);
+    //defineDefaultGoal(&goal, line, column);
     AStar(&initial, &goal, line, column);
 
     return 0;

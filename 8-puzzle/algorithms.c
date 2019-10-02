@@ -27,41 +27,25 @@ Node *createNode(State *state, Node *parent, unsigned int depth, unsigned int he
 }
 
 void pushNode(ListNode **const start, Node *node) {
-    if (*start == NULL) {
-        ListNode *newNode;
-        newNode = (ListNode *) malloc(sizeof(ListNode));
+    ListNode *newNode;
+    newNode = (ListNode *) malloc(sizeof(ListNode));
+    if ((*start) == NULL) {
         newNode->currentNode = node;
         (*start) = newNode;
     } else {
-        ListNode *newNode;
-        newNode = (ListNode *) malloc(sizeof(ListNode));
         newNode->currentNode = node;
         newNode->nextNode = (*start);
         (*start) = newNode;
     }
 }
 
-void pushList(ListNode **const children, ListNode **const list) {
-    ListNode *ptr;
-    if ((*children) == NULL) {
-        return;
-    }
-    ptr = *children;
-    while (ptr != NULL) {
-        if ((*list) == NULL) {
-            ListNode *newNode;
-            newNode = (ListNode *) malloc(sizeof(ListNode));
-            newNode->currentNode = ptr->currentNode;
-            (*list) = newNode;
-        } else {
-            ListNode *newNode;
-            newNode = (ListNode *) malloc(sizeof(ListNode));
-            newNode->currentNode = ptr->currentNode;
-            newNode->nextNode = (*list);
-            (*list) = newNode;
-        }
-        ptr = ptr->nextNode;
-    }
+void concatenate(ListNode **const a, ListNode *b) {
+    if ((*a) == NULL)
+        (*a) = b;
+    else if((*a)->nextNode == NULL)
+        (*a)->nextNode = b;
+    else
+        concatenate(&(*a)->nextNode, b);
 }
 
 int popNode(ListNode **const start) {
@@ -154,7 +138,7 @@ void AStar(State *const initial, State *const goal, int line, int column) {
         int h = manhattanHeuristic(initial, goal, line, column);
         int f = g + h;
         pushNode(&open, createNode(initial, NULL, g, h));
-        //printOfStateOfNode(open->currentNode, line, column);
+//        printOfStateOfNode(open->currentNode, line, column);
         while (open != NULL) {
             node = open->currentNode;
             popNode(&open); // remove first element
@@ -164,14 +148,13 @@ void AStar(State *const initial, State *const goal, int line, int column) {
             }
             pushNode(&closed, node);
             children = getChildren(goal, node, line, column);
-            printf("%d\n", expansion++);
-            bubbleSort(&children);
-            //printListNode(&children, line, column);
-            //printf("----------\n");
-            pushList(&children, &open);
+            //printf("%d\n", expansion++);
+//            printListNode(&children, line, column);
+//            printf("----------\n");
+            concatenate(&open, children);
             bubbleSort(&open);
             //pushNode(&open, children->currentNode);
-            //printOfStateOfNode(children->currentNode, line, column);
+            //printOfStateOfNode(open->currentNode, line, column);
         }
     }
 }

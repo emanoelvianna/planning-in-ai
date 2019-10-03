@@ -3,14 +3,27 @@ int getTotalCost(Node *const node) {
 }
 
 int getManhattanHeuristic(State *const current, State *const goal, int line, int column) {
+    int x0, y0; //used for indexing each symbol in `curr`
+    int x1, y1; //correspoinding row and column of symbol from curr[y0, x0] at `goal`
+    int dx, dy; //change in x0 and x1, and y0 and y1, respectively
     int sum = 0;
-    for (int i = 0; i < line; i++) {
-        for (int j = 0; j < column; j++) {
-            if ((current->board[i][j] != goal->board[i][j]) && (current->board[i][j] != 0)) {
-                sum = sum + 1;
+
+    //for each symbol in `curr`
+    for (y0 = 0; y0 < 3; ++y0) {
+        for (x0 = 0; x0 < 3; ++x0) {
+            //find the coordinates of the same symbol in `goal`
+            for (y1 = 0; y1 < 3; ++y1) {
+                for (x1 = 0; x1 < 3; ++x1) {
+                    if (current->board[y0][x0] == goal->board[y1][x1]) {
+                        dx = (x0 - x1 < 0) ? x1 - x0 : x0 - x1;
+                        dy = (y0 - y1 < 0) ? y1 - y0 : y0 - y1;
+                        sum += dx + dy;
+                    }
+                }
             }
         }
     }
+
     return sum;
 }
 
@@ -69,10 +82,6 @@ ListNode *getChildren(State *goal, Node *parent, int line, int column) {
         child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&children, child);
     }
-    if ((valid = moveTile(parent->state, DOWN, line, column))) {
-        child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
-        pushNode(&children, child);
-    }
     if ((valid = moveTile(parent->state, LEFT, line, column))) {
         child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&children, child);
@@ -81,10 +90,14 @@ ListNode *getChildren(State *goal, Node *parent, int line, int column) {
         child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&children, child);
     }
+    if ((valid = moveTile(parent->state, DOWN, line, column))) {
+        child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
+        pushNode(&children, child);
+    }
     return children;
 }
 
-void sortByCost(ListNode **const start) {
+void bubble_sort(ListNode **const start) {
     int swapped;
     ListNode *helper1;
     ListNode *helper2 = NULL;
@@ -106,6 +119,31 @@ void sortByCost(ListNode **const start) {
     } while (swapped);
 }
 
+void quick_sort(int *a, int left, int right) {
+    int i, j, x, y;
+    i = left;
+    j = right;
+    x = a[(left + right) / 2];
+    while (i <= j) {
+        while (a[i] < x && i < right) { i++; }
+        while (a[j] > x && j > left) { j--; }
+        if (i <= j) {
+            y = a[i];
+            a[i] = a[j];
+            a[j] = y;
+            i++;
+            j--;
+        }
+    }
+
+    if (j > left) {
+        quick_sort(a, left, j);
+    }
+    if (i < right) {
+        quick_sort(a, i, right);
+    }
+}
+
 void printListOfNodes(ListNode **const start, int line, int column) {
     ListNode *ptr;
     if (*start == NULL) {
@@ -124,4 +162,14 @@ void printNodeStatus(Node *node, int line, int column) {
     printf("Depth = %d\n", node->depth);
     printf("Heuristic = %d\n", node->heuristic);
     showBoard(node->state, line, column);
+}
+
+void printSolutionPath(Node *node, int line, int column) {
+    char *move[4] = {"UP", "DOWN", "LEFT", "RIGHT"};
+    Node *path;
+    path = node;
+    while (path->parent != NULL) {
+        printf("Move %s\n", move[path->state->action]);
+        path = path->parent;
+    }
 }

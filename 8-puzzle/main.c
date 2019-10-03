@@ -24,13 +24,13 @@ void processInputData(State *const state, int input[], int sizeOfInput, int line
 }
 
 int main() {
-    int inputForInitial[9] = {1, 2, 5,
-                              3, 4, 0,
-                              6, 7, 8};
+    int inputForInitial[9] = {1, 2, 3,
+                              0, 4, 6,
+                              7, 5, 8};
 
-    int inputForGoal[9] = {0, 1, 2,
-                           3, 4, 5,
-                           6, 7, 8};
+    int inputForGoal[9] = {1, 2, 3,
+                           4, 5, 6,
+                           7, 8, 0};
 
     int sizeOfInput = 9;
     int line = 3;

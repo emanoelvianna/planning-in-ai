@@ -1,4 +1,5 @@
 void AStar(State *const initial, State *const goal, int line, int column) {
+    double averageHeuristic;
     double runtime;
     clock_t start = clock();
     int expanded = 0;
@@ -12,15 +13,11 @@ void AStar(State *const initial, State *const goal, int line, int column) {
         pushNode(&open, createNode(initial, NULL, g, h));
         while (open != NULL) {
             currentNode = open->currentNode;
+            averageHeuristic = averageHeuristic + currentNode->heuristic;
             if (isGoal(currentNode->state, goal, line, column)) {
                 runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
-                printf("- MOVEMENT TO SOLUTION:\n");
-                printSolutionPath(currentNode, line, column);
-                printf("- DETAILS:\n");
-                printf("Runtime = %g milliseconds\n", runtime);
-                printf("Heuristic in the initial state = %d\n", h);
-                printf("Nodes expanded = %d\n", expanded);
-                printNodeStatus(currentNode, line, column);
+                averageHeuristic = averageHeuristic / currentNode->depth;
+                printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
                 break;
             }
             // printNodeStatus(currentNode, line, column);
@@ -39,10 +36,10 @@ void AStar(State *const initial, State *const goal, int line, int column) {
 }
 
 void iterativeDeepening(State *const initial, State *const goal, int line, int column) {
+    double averageHeuristic;
     int expanded = 0;
     double runtime;
     clock_t start = clock();
-    ListNode *expandedNodes = NULL;
     ListNode *visitedNodes = NULL;
     ListNode *toVisit = NULL;
     ListNode *neighbors = NULL;
@@ -53,15 +50,11 @@ void iterativeDeepening(State *const initial, State *const goal, int line, int c
     pushNode(&toVisit, createNode(initial, NULL, g, h));
     while (1) {
         currentNode = toVisit->currentNode;
+        averageHeuristic = averageHeuristic + currentNode->heuristic;
         if (isGoal(currentNode->state, goal, line, column)) {
             runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
-            printf("- MOVEMENT TO SOLUTION:\n");
-            printSolutionPath(currentNode, line, column);
-            printf("- DETAILS:\n");
-            printf("Runtime = %g milliseconds\n", runtime);
-            printf("Heuristic in the initial state = %d\n", h);
-            printf("Nodes expanded = %d\n", expanded);
-            printNodeStatus(currentNode, line, column);
+            averageHeuristic = averageHeuristic / currentNode->depth;
+            printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
             break;
         }
         popNode(&toVisit);
@@ -75,10 +68,10 @@ void iterativeDeepening(State *const initial, State *const goal, int line, int c
 }
 
 void iterativeDeepeningAStar(State *const initial, State *const goal, int line, int column) {
+    double averageHeuristic;
     int expanded = 0;
     double runtime;
     clock_t start = clock();
-    ListNode *expandedNodes = NULL;
     ListNode *visitedNodes = NULL;
     ListNode *toVisit = NULL;
     ListNode *neighbors = NULL;
@@ -89,15 +82,11 @@ void iterativeDeepeningAStar(State *const initial, State *const goal, int line, 
     pushNode(&toVisit, createNode(initial, NULL, g, h));
     while (1) {
         currentNode = toVisit->currentNode;
+        averageHeuristic = averageHeuristic + currentNode->heuristic;
         if (isGoal(currentNode->state, goal, line, column)) {
             runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
-            printf("- MOVEMENT TO SOLUTION:\n");
-            printSolutionPath(currentNode, line, column);
-            printf("- DETAILS:\n");
-            printf("Runtime = %g milliseconds\n", runtime);
-            printf("Heuristic in the initial state = %d\n", h);
-            printf("Nodes expanded = %d\n", expanded);
-            printNodeStatus(currentNode, line, column);
+            averageHeuristic = averageHeuristic / currentNode->depth;
+            printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
             break;
         }
         popNode(&toVisit);
@@ -109,4 +98,43 @@ void iterativeDeepeningAStar(State *const initial, State *const goal, int line, 
             bubble_sort(&toVisit);
         }
     }
+}
+
+void greedySearch(State *const initial, State *const goal, int line, int column) {
+    double averageHeuristic;
+    int expanded = 0;
+    double runtime;
+    clock_t start = clock();
+    ListNode *explored = NULL;
+    ListNode *frontier = NULL;
+    ListNode *neighbors = NULL;
+    Node *currentNode = NULL;
+
+    int g = 0;
+    int h = getManhattanHeuristic(initial, goal, line, column);
+    pushNode(&frontier, createNode(initial, NULL, g, h));
+    while (frontier != NULL) {
+        currentNode = frontier->currentNode;
+        averageHeuristic = averageHeuristic + currentNode->heuristic;
+        if (isGoal(currentNode->state, goal, line, column)) {
+            runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
+            averageHeuristic = averageHeuristic / currentNode->depth;
+            printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
+            break;
+        }
+        expanded++;
+        pushNode(&explored, currentNode);
+        neighbors = getNeighbors(currentNode, goal, line, column);
+        if (neighbors != NULL) {
+            expanded++;
+            removeDuplicatesNode(frontier, &neighbors, line, column);
+            removeDuplicatesNode(explored, &neighbors, line, column);
+            concatenateListOfNodes(&frontier, neighbors);
+            bubble_sort(&frontier);
+        }
+    }
+}
+
+void bfsGraph(State *const initial, State *const goal, int line, int column) {
+    // TODO:
 }

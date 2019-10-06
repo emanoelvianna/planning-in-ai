@@ -182,3 +182,7 @@ void printSolutionPath(Node *node, int line, int column) {
         path = path->parent;
     }
 }
+
+void printDetailsOfSolution(int expanded, int depth, double runtime, double averageHeuristic, int finalHeuristic) {
+    printf("%d,%d,%g,%g,%d\n", expanded, depth, runtime, averageHeuristic, finalHeuristic);
+}

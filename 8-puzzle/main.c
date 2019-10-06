@@ -41,7 +41,9 @@ int main() {
 
     processInputData(&initial, inputForInitial, sizeOfInput, line, column);
     processInputData(&goal, inputForGoal, sizeOfInput, line, column);
-    AStar(&initial, &goal, line, column);
+
+    // AStar(&initial, &goal, line, column);
+    iterativeDeepening(&initial, &goal, line, column);
 
     return 0;
 }

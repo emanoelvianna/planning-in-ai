@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "model.h"
 #include "game.c"
 #include "service.c"
@@ -24,13 +25,13 @@ void processInputData(State *const state, int input[], int sizeOfInput, int line
 }
 
 int main() {
-    int inputForInitial[9] = {1, 2, 3,
-                              0, 4, 6,
-                              7, 5, 8};
+    int inputForInitial[9] = {2, 4, 7,
+                              0, 3, 6,
+                              8, 1, 5};
 
-    int inputForGoal[9] = {1, 2, 3,
-                           4, 5, 6,
-                           7, 8, 0};
+    int inputForGoal[9] = {0, 1, 2,
+                           3, 4, 5,
+                           6, 7, 8};
 
     int sizeOfInput = 9;
     int line = 3;

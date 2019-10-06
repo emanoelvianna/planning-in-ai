@@ -2,18 +2,16 @@ int getTotalCost(Node *const node) {
     return node->depth + node->heuristic;
 }
 
-int getManhattanHeuristic(State *const current, State *const goal, int line, int column) {
-    int x0, y0; //used for indexing each symbol in `curr`
-    int x1, y1; //correspoinding row and column of symbol from curr[y0, x0] at `goal`
-    int dx, dy; //change in x0 and x1, and y0 and y1, respectively
+int getManhattanHeuristic(State *current, State *goal, int line, int column) {
+    int x0, y0;
+    int x1, y1;
+    int dx, dy;
     int sum = 0;
 
-    //for each symbol in `curr`
-    for (y0 = 0; y0 < 3; ++y0) {
-        for (x0 = 0; x0 < 3; ++x0) {
-            //find the coordinates of the same symbol in `goal`
-            for (y1 = 0; y1 < 3; ++y1) {
-                for (x1 = 0; x1 < 3; ++x1) {
+    for (y0 = 0; y0 < line; ++y0) {
+        for (x0 = 0; x0 < column; ++x0) {
+            for (y1 = 0; y1 < line; ++y1) {
+                for (x1 = 0; x1 < column; ++x1) {
                     if (current->board[y0][x0] == goal->board[y1][x1]) {
                         dx = (x0 - x1 < 0) ? x1 - x0 : x0 - x1;
                         dy = (y0 - y1 < 0) ? y1 - y0 : y0 - y1;
@@ -34,22 +32,24 @@ Node *createNode(State *state, Node *parent, unsigned int depth, unsigned int he
         newNode->heuristic = heuristic;
         newNode->state = state;
         newNode->parent = parent;
-        newNode->children = NULL;
+        newNode->neighbors = NULL;
     }
     return newNode;
 }
 
-void pushNode(ListNode **const start, Node *node) {
+void pushNode(ListNode **const listNode, Node *node) {
     ListNode *newNode;
     newNode = (ListNode *) malloc(sizeof(ListNode));
-    if ((*start) == NULL) {
-        newNode->currentNode = node;
-        (*start) = newNode;
+    newNode->currentNode = node;
+    if ((*listNode) == NULL) {
+        newNode->previousNode = NULL;
+        newNode->nextNode = NULL;
     } else {
-        newNode->currentNode = node;
-        newNode->nextNode = (*start);
-        (*start) = newNode;
+        newNode->nextNode = (*listNode);
+        newNode->previousNode = NULL;
+        (*listNode)->previousNode = newNode;
     }
+    (*listNode) = newNode;
 }
 
 int popNode(ListNode **const start) {
@@ -59,6 +59,8 @@ int popNode(ListNode **const start) {
     else {
         ptr = (*start);
         (*start) = (*start)->nextNode;
+        if ((*start))
+            (*start)->previousNode = NULL;
         free(ptr);
         return 1;
     }
@@ -73,28 +75,60 @@ void concatenateListOfNodes(ListNode **const a, ListNode *b) {
         concatenateListOfNodes(&(*a)->nextNode, b);
 }
 
-ListNode *getChildren(State *goal, Node *parent, int line, int column) {
-    ListNode *children = NULL;
-    State *valid = NULL;
-    Node *child = NULL;
+int isEqualState(State *a, State *b, int line, int column) {
+    while (line--) {
+        while (column--) {
+            if (a->board[line][column] != b->board[line][column])
+                return 0;
+        }
+    }
+    return 1;
+}
 
-    if ((valid = moveTile(parent->state, UP, line, column))) {
-        child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
-        pushNode(&children, child);
+void removeDuplicatesNode(ListNode *a, ListNode **const b, int line, int column) {
+    ListNode *helper1 = a;
+    ListNode *helper2 = (*b);
+    if (helper1 == NULL)
+        return;
+    while (helper1->nextNode != NULL) {
+        while (helper2->nextNode != NULL) {
+            if (isEqualState(helper1->currentNode->state, helper2->currentNode->state, line, column)) {
+                ListNode *helper = helper2;
+                helper2->previousNode->nextNode = helper2->nextNode;
+                helper2->nextNode->previousNode = helper2->previousNode;
+                helper2 = helper2->nextNode;
+                free(helper);
+                printf("Eh nodo repetido!");
+            } else {
+                helper2 = helper2->nextNode;
+            }
+        }
+        helper1 = helper1->nextNode;
     }
-    if ((valid = moveTile(parent->state, LEFT, line, column))) {
-        child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
-        pushNode(&children, child);
+}
+
+ListNode *getNeighbors(Node *parent, State *goal, int line, int column) {
+    ListNode *neighbors = NULL;
+    State *valid = NULL;
+    Node *neighbor = NULL;
+
+    if (parent->state->action != DOWN && (valid = moveTile(parent->state, UP, line, column))) {
+        neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
+        pushNode(&neighbors, neighbor);
     }
-    if ((valid = moveTile(parent->state, RIGHT, line, column))) {
-        child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
-        pushNode(&children, child);
+    if (parent->state->action != RIGHT && (valid = moveTile(parent->state, LEFT, line, column))) {
+        neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
+        pushNode(&neighbors, neighbor);
     }
-    if ((valid = moveTile(parent->state, DOWN, line, column))) {
-        child = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
-        pushNode(&children, child);
+    if (parent->state->action != LEFT && (valid = moveTile(parent->state, RIGHT, line, column))) {
+        neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
+        pushNode(&neighbors, neighbor);
     }
-    return children;
+    if (parent->state->action != UP && (valid = moveTile(parent->state, DOWN, line, column))) {
+        neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
+        pushNode(&neighbors, neighbor);
+    }
+    return neighbors;
 }
 
 void bubble_sort(ListNode **const start) {
@@ -119,31 +153,6 @@ void bubble_sort(ListNode **const start) {
     } while (swapped);
 }
 
-void quick_sort(int *a, int left, int right) {
-    int i, j, x, y;
-    i = left;
-    j = right;
-    x = a[(left + right) / 2];
-    while (i <= j) {
-        while (a[i] < x && i < right) { i++; }
-        while (a[j] > x && j > left) { j--; }
-        if (i <= j) {
-            y = a[i];
-            a[i] = a[j];
-            a[j] = y;
-            i++;
-            j--;
-        }
-    }
-
-    if (j > left) {
-        quick_sort(a, left, j);
-    }
-    if (i < right) {
-        quick_sort(a, i, right);
-    }
-}
-
 void printListOfNodes(ListNode **const start, int line, int column) {
     ListNode *ptr;
     if (*start == NULL) {
@@ -159,8 +168,8 @@ void printListOfNodes(ListNode **const start, int line, int column) {
 }
 
 void printNodeStatus(Node *node, int line, int column) {
-    printf("Depth = %d\n", node->depth);
-    printf("Heuristic = %d\n", node->heuristic);
+    printf("Solution length = %d\n", node->depth);
+    // printf("Heuristic = %d\n", node->heuristic);
     showBoard(node->state, line, column);
 }
 

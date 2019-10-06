@@ -38,7 +38,8 @@ State *moveTile(State *state, Movement move, int line, int column) {
             newState->board[i][j] = state->board[i][j];
         }
     }
-    if (move == UP && line - 1 >= 0) { // TODO: Nem tudo pode ser fixo!
+
+    if (move == UP && line - 1 >= 0) {
         int temp = newState->board[line - 1][column];
         newState->board[line - 1][column] = 0;
         newState->board[line][column] = temp;
@@ -63,6 +64,7 @@ State *moveTile(State *state, Movement move, int line, int column) {
         newState->action = RIGHT;
         return newState;
     }
+
     free(newState);
     return NULL;
 }

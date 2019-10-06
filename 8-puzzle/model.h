@@ -15,6 +15,7 @@ struct State {
 struct ListNode {
     Node *currentNode;
     struct ListNode *nextNode;
+    struct ListNode *previousNode;
 };
 
 struct Node {
@@ -22,7 +23,7 @@ struct Node {
     unsigned int heuristic; // h
     State *state;
     Node *parent;
-    ListNode *children;
+    ListNode *neighbors;
 };
 
 

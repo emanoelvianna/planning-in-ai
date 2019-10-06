@@ -15,6 +15,8 @@ stdio.h
 -
 stdlib.h
 -
+time.h
+-
 model.h
 /home/emanoel/desenvolvimento/repositorio/planning-in-ai/8-puzzle/model.h
 game.c

@@ -107,24 +107,24 @@ void removeDuplicatesNode(ListNode *a, ListNode **const b, int line, int column)
     }
 }
 
-ListNode *getNeighbors(Node *parent, State *goal, int line, int column) {
+ListNode *getNeighbors(Node *parent, State *goal, int line, int column, int isSixteen) {
     ListNode *neighbors = NULL;
     State *valid = NULL;
     Node *neighbor = NULL;
 
-    if (parent->state->action != DOWN && (valid = moveTile(parent->state, UP, line, column))) {
+    if (parent->state->action != DOWN && (valid = moveTile(parent->state, UP, line, column, isSixteen))) {
         neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&neighbors, neighbor);
     }
-    if (parent->state->action != RIGHT && (valid = moveTile(parent->state, LEFT, line, column))) {
+    if (parent->state->action != RIGHT && (valid = moveTile(parent->state, LEFT, line, column, isSixteen))) {
         neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&neighbors, neighbor);
     }
-    if (parent->state->action != LEFT && (valid = moveTile(parent->state, RIGHT, line, column))) {
+    if (parent->state->action != LEFT && (valid = moveTile(parent->state, RIGHT, line, column, isSixteen))) {
         neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&neighbors, neighbor);
     }
-    if (parent->state->action != UP && (valid = moveTile(parent->state, DOWN, line, column))) {
+    if (parent->state->action != UP && (valid = moveTile(parent->state, DOWN, line, column, isSixteen))) {
         neighbor = createNode(valid, parent, parent->depth + 1, getManhattanHeuristic(valid, goal, line, column));
         pushNode(&neighbors, neighbor);
     }

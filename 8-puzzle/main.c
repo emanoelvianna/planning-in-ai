@@ -39,9 +39,9 @@ int main(int argc, char *argv[]) {
                            6, 7, 8};
 
     int goalWithSixteen[16] = {0, 1, 2, 3,
-                            4, 5, 6, 7,
-                            8, 9, 10, 11,
-                            12, 13, 14, 15};
+                               4, 5, 6, 7,
+                               8, 9, 10, 11,
+                               12, 13, 14, 15};
 
     State initial;
     State goal;
@@ -82,29 +82,23 @@ int main(int argc, char *argv[]) {
                 count++;
             }
         } else if (!strcmp(argv[1], "-astar")) {
-
-            // ./main -astar 7 11 8 3 14 0 6 15 1 4 13 9 5 12 2 10, 12 9 0 6 8 3 5 14 2 4 11 7 10 1 15 13
-
             int arrayHelper[15];
             int position = 0;
             int count = 2;
             while (count != argc) {
                 int helper = strtol(argv[count], NULL, 10);
                 arrayHelper[position] = helper;
-                printf("%d\n", arrayHelper[position]);
                 if (position <= 9)
                     defaultInputForInitial[position] = helper;
                 if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
                     if (position == 15) {  // specific to size 15
                         processInputData(&initial, arrayHelper, 4, 4);
                         processInputData(&goal, goalWithSixteen, 4, 4);
-                        showBoard(&initial, 4, 4);
-                        AStar(&initial, &goal, 4, 4);
+                        AStar(&initial, &goal, 4, 4, 1);
                     } else {
                         processInputData(&initial, defaultInputForInitial, 3, 3);
                         processInputData(&goal, goalWithNine, 3, 3);
-                        showBoard(&initial, 3, 3);
-                        AStar(&initial, &goal, 3, 3);
+                        AStar(&initial, &goal, 3, 3, 0);
                     }
                     position = 0;
                 } else {
@@ -120,7 +114,7 @@ int main(int argc, char *argv[]) {
                 defaultInputForInitial[position] = helper;
                 if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
                     processInputData(&initial, defaultInputForInitial, 3, 3);
-                    processInputData(&goal, goalWithNine, 15, 15);
+                    processInputData(&goal, goalWithNine, 3, 3);
                     iterativeDeepeningAStar(&initial, &goal, 3, 3);
                     position = 0;
                 } else {
@@ -136,7 +130,7 @@ int main(int argc, char *argv[]) {
                 defaultInputForInitial[position] = helper;
                 if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
                     processInputData(&initial, defaultInputForInitial, 3, 3);
-                    processInputData(&goal, goalWithNine, 15, 15);
+                    processInputData(&goal, goalWithNine, 3, 3);
                     greedySearch(&initial, &goal, 3, 3);
                     position = 0;
                 } else {

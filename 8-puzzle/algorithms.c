@@ -1,4 +1,4 @@
-void AStar(State *const initial, State *const goal, int line, int column) {
+void AStar(State *const initial, State *const goal, int line, int column, int isSixteen) {
     double averageHeuristic;
     double runtime;
     clock_t start = clock();
@@ -7,14 +7,14 @@ void AStar(State *const initial, State *const goal, int line, int column) {
     ListNode *open = NULL;
     ListNode *neighbors = NULL;
     Node *currentNode = NULL;
-    if (!isGoal(initial, goal, line, column)) {
+    if (!isGoal(initial, goal, line, column, isSixteen)) {
         int g = 0;
         int h = getManhattanHeuristic(initial, goal, line, column);
         pushNode(&open, createNode(initial, NULL, g, h));
         while (open != NULL) {
             currentNode = open->currentNode;
             averageHeuristic = averageHeuristic + currentNode->heuristic;
-            if (isGoal(currentNode->state, goal, line, column)) {
+            if (isGoal(currentNode->state, goal, line, column, isSixteen)) {
                 runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
                 averageHeuristic = averageHeuristic / currentNode->depth;
                 printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
@@ -22,7 +22,7 @@ void AStar(State *const initial, State *const goal, int line, int column) {
             }
             popNode(&open);
             pushNode(&closed, currentNode);
-            neighbors = getNeighbors(currentNode, goal, line, column);
+            neighbors = getNeighbors(currentNode, goal, line, column, isSixteen);
             if (neighbors != NULL) {
                 expanded++;
                 removeDuplicatesNode(open, &neighbors, line, column);
@@ -50,7 +50,7 @@ void iterativeDeepening(State *const initial, State *const goal, int line, int c
     while (1) {
         currentNode = toVisit->currentNode;
         averageHeuristic = averageHeuristic + currentNode->heuristic;
-        if (isGoal(currentNode->state, goal, line, column)) {
+        if (isGoal(currentNode->state, goal, line, column, 0)) {
             runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
             averageHeuristic = averageHeuristic / currentNode->depth;
             printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
@@ -58,7 +58,7 @@ void iterativeDeepening(State *const initial, State *const goal, int line, int c
         }
         popNode(&toVisit);
         pushNode(&visitedNodes, currentNode);
-        neighbors = getNeighbors(currentNode, goal, line, column);
+        neighbors = getNeighbors(currentNode, goal, line, column, 0);
         if (neighbors != NULL) {
             expanded++;
             concatenateListOfNodes(&toVisit, neighbors);
@@ -82,7 +82,7 @@ void iterativeDeepeningAStar(State *const initial, State *const goal, int line, 
     while (1) {
         currentNode = toVisit->currentNode;
         averageHeuristic = averageHeuristic + currentNode->heuristic;
-        if (isGoal(currentNode->state, goal, line, column)) {
+        if (isGoal(currentNode->state, goal, line, column, 0)) {
             runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
             averageHeuristic = averageHeuristic / currentNode->depth;
             printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
@@ -90,7 +90,7 @@ void iterativeDeepeningAStar(State *const initial, State *const goal, int line, 
         }
         popNode(&toVisit);
         pushNode(&visitedNodes, currentNode);
-        neighbors = getNeighbors(currentNode, goal, line, column);
+        neighbors = getNeighbors(currentNode, goal, line, column, 0);
         if (neighbors != NULL) {
             expanded++;
             concatenateListOfNodes(&toVisit, neighbors);
@@ -115,7 +115,7 @@ void greedySearch(State *const initial, State *const goal, int line, int column)
     while (frontier != NULL) {
         currentNode = frontier->currentNode;
         averageHeuristic = averageHeuristic + currentNode->heuristic;
-        if (isGoal(currentNode->state, goal, line, column)) {
+        if (isGoal(currentNode->state, goal, line, column, 0)) {
             runtime = (double) (clock() - start) / CLOCKS_PER_SEC;
             averageHeuristic = averageHeuristic / currentNode->depth;
             printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
@@ -123,7 +123,7 @@ void greedySearch(State *const initial, State *const goal, int line, int column)
         }
         expanded++;
         pushNode(&explored, currentNode);
-        neighbors = getNeighbors(currentNode, goal, line, column);
+        neighbors = getNeighbors(currentNode, goal, line, column, 0);
         if (neighbors != NULL) {
             expanded++;
             removeDuplicatesNode(frontier, &neighbors, line, column);

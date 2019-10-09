@@ -20,7 +20,6 @@ void AStar(State *const initial, State *const goal, int line, int column) {
                 printDetailsOfSolution(expanded, currentNode->depth, runtime, averageHeuristic, h);
                 break;
             }
-            // printNodeStatus(currentNode, line, column);
             popNode(&open);
             pushNode(&closed, currentNode);
             neighbors = getNeighbors(currentNode, goal, line, column);

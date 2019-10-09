@@ -1,7 +1,7 @@
 int isGoal(State const *testState, State const *goalState, int line, int column) {
-    char row = 3, col;
+    char row = line, col;
     while (row--) {
-        col = 3;
+        col = column;
         while (col--) {
             if (testState->board[row][col] != goalState->board[row][col])
                 return 0;
@@ -22,45 +22,47 @@ void showBoard(State *state, int line, int column) {
     printf("----------\n");
 }
 
-State *moveTile(State *state, Movement move, int line, int column) {
+State *moveTile(State *state, Movement move, int sizeOfOriginalLine, int sizeOfOriginalColumn) {
     int i, j;
-    int **m = malloc(line * sizeof(int *));
-    for (i = 0; i < line; ++i)
-        m[i] = malloc(column * sizeof(int));
+    int helperLine = sizeOfOriginalLine;
+    int helperColumn = sizeOfOriginalColumn;
+    int **m = malloc(helperLine * sizeof(int *));
+    for (i = 0; i < helperLine; ++i)
+        m[i] = malloc(helperColumn * sizeof(int));
     State *newState = malloc(sizeof(State));
     newState->board = m;
-    for (i = 0; i < 3; ++i) {
-        for (j = 0; j < 3; ++j) {
+    for (i = 0; i < helperLine; ++i) {
+        for (j = 0; j < helperColumn; ++j) {
             if (state->board[i][j] == 0) {
-                line = i;
-                column = j;
+                helperLine = i;
+                helperColumn = j;
             }
             newState->board[i][j] = state->board[i][j];
         }
     }
 
-    if (move == UP && line - 1 >= 0) {
-        int temp = newState->board[line - 1][column];
-        newState->board[line - 1][column] = 0;
-        newState->board[line][column] = temp;
+    if (move == UP && helperLine - 1 >= 0) {
+        int temp = newState->board[helperLine - 1][helperColumn];
+        newState->board[helperLine - 1][helperColumn] = 0;
+        newState->board[helperLine][helperColumn] = temp;
         newState->action = UP;
         return newState;
-    } else if (move == DOWN && line + 1 < 3) {
-        int temp = newState->board[line + 1][column];
-        newState->board[line + 1][column] = 0;
-        newState->board[line][column] = temp;
+    } else if (move == DOWN && helperLine + 1 < sizeOfOriginalLine) {
+        int temp = newState->board[helperLine + 1][helperColumn];
+        newState->board[helperLine + 1][helperColumn] = 0;
+        newState->board[helperLine][helperColumn] = temp;
         newState->action = DOWN;
         return newState;
-    } else if (move == LEFT && column - 1 >= 0) {
-        int temp = newState->board[line][column - 1];
-        newState->board[line][column - 1] = 0;
-        newState->board[line][column] = temp;
+    } else if (move == LEFT && helperColumn - 1 >= 0) {
+        int temp = newState->board[helperLine][helperColumn - 1];
+        newState->board[helperLine][helperColumn - 1] = 0;
+        newState->board[helperLine][helperColumn] = temp;
         newState->action = LEFT;
         return newState;
-    } else if (move == RIGHT && column + 1 < 3) {
-        int temp = newState->board[line][column + 1];
-        newState->board[line][column + 1] = 0;
-        newState->board[line][column] = temp;
+    } else if (move == RIGHT && helperColumn + 1 < sizeOfOriginalColumn) {
+        int temp = newState->board[helperLine][helperColumn + 1];
+        newState->board[helperLine][helperColumn + 1] = 0;
+        newState->board[helperLine][helperColumn] = temp;
         newState->action = RIGHT;
         return newState;
     }

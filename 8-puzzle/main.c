@@ -7,7 +7,7 @@
 #include "service.c"
 #include "algorithms.c"
 
-void processInputData(State *const state, int input[], int sizeOfInput, int line, int column) {
+void processInputData(State *const state, int input[], int line, int column) {
     state->action = NOT_APPLICABLE;
     int i, j;
     // allocating space to matrix
@@ -25,60 +25,125 @@ void processInputData(State *const state, int input[], int sizeOfInput, int line
     state->board = m;
 }
 
-void usage(char *exec) {
-    // TODO: Informar ao usuário como utilizar o programa
+void usage() {
+    printf("use: -<algorithm> <input>\n");
 }
 
 int main(int argc, char *argv[]) {
-    int inputForInitial[9] = {0, 6, 1,
-                              7, 4, 2,
-                              3, 8, 5};
+    int defaultInputForInitial[9] = {5, 4, 6,
+                                     3, 2, 7,
+                                     0, 1, 8};
 
-    int defaultInputGoal[9] = {0, 1, 2,
-                               3, 4, 5,
-                               6, 7, 8};
+    int goalWithNine[9] = {0, 1, 2,
+                           3, 4, 5,
+                           6, 7, 8};
 
-    int sizeOfInput = 9;
-    int line = 3;
-    int column = 3;
+    int goalWithSixteen[16] = {0, 1, 2, 3,
+                            4, 5, 6, 7,
+                            8, 9, 10, 11,
+                            12, 13, 14, 15};
+
     State initial;
     State goal;
 
     if (argc < 2) {
-        usage(argv[0]);
+        usage();
     } else {
-        processInputData(&goal, defaultInputGoal, sizeOfInput, line, column);
-        // TODO: Obter os dados como parametro!
-
-        int count = 0;
-        for (int i = 0; i < argc; i++) {
-            if (i > 1) {
-                if (!strcmp(argv[i], ",")) {
-                    int helper = strtol(argv[i], NULL, 10);
-                    inputForInitial[count] = helper;
-                    count++;
-                } else if (strcmp(argv[i], ",")) {
-                    printf("opa\n");
-                }
-            }
-        }
-
         if (!strcmp(argv[1], "-bfs")) {
-            processInputData(&initial, inputForInitial, sizeOfInput, line, column);
-            bfsGraph(&initial, &goal, line, column);
+            int position = 0;
+            int count = 2;
+            while (count != argc) {
+                int helper = strtol(argv[count], NULL, 10);
+                defaultInputForInitial[position] = helper;
+                if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
+                    processInputData(&initial, defaultInputForInitial, 3, 3);
+                    processInputData(&goal, goalWithNine, 3, 3);
+                    bfsGraph(&initial, &goal, 3, 3);
+                    position = 0;
+                } else {
+                    position++;
+                }
+                count++;
+            }
         } else if (!strcmp(argv[1], "-idfs")) {
-            processInputData(&initial, inputForInitial, sizeOfInput, line, column);
-            showBoard(&initial, line, column);
-            iterativeDeepening(&initial, &goal, line, column);
+            int position = 0;
+            int count = 2;
+            while (count != argc) {
+                int helper = strtol(argv[count], NULL, 10);
+                defaultInputForInitial[position] = helper;
+                if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
+                    processInputData(&initial, defaultInputForInitial, 3, 3);
+                    processInputData(&goal, goalWithNine, 3, 3);
+                    iterativeDeepening(&initial, &goal, 3, 3);
+                    position = 0;
+                } else {
+                    position++;
+                }
+                count++;
+            }
         } else if (!strcmp(argv[1], "-astar")) {
-            processInputData(&initial, inputForInitial, sizeOfInput, line, column);
-            AStar(&initial, &goal, line, column);
+
+            // ./main -astar 7 11 8 3 14 0 6 15 1 4 13 9 5 12 2 10, 12 9 0 6 8 3 5 14 2 4 11 7 10 1 15 13
+
+            int arrayHelper[15];
+            int position = 0;
+            int count = 2;
+            while (count != argc) {
+                int helper = strtol(argv[count], NULL, 10);
+                arrayHelper[position] = helper;
+                printf("%d\n", arrayHelper[position]);
+                if (position <= 9)
+                    defaultInputForInitial[position] = helper;
+                if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
+                    if (position == 15) {  // specific to size 15
+                        processInputData(&initial, arrayHelper, 4, 4);
+                        processInputData(&goal, goalWithSixteen, 4, 4);
+                        showBoard(&initial, 4, 4);
+                        AStar(&initial, &goal, 4, 4);
+                    } else {
+                        processInputData(&initial, defaultInputForInitial, 3, 3);
+                        processInputData(&goal, goalWithNine, 3, 3);
+                        showBoard(&initial, 3, 3);
+                        AStar(&initial, &goal, 3, 3);
+                    }
+                    position = 0;
+                } else {
+                    position++;
+                }
+                count++;
+            }
         } else if (!strcmp(argv[1], "-idastar")) {
-            processInputData(&initial, inputForInitial, sizeOfInput, line, column);
-            iterativeDeepeningAStar(&initial, &goal, line, column);
+            int position = 0;
+            int count = 2;
+            while (count != argc) {
+                int helper = strtol(argv[count], NULL, 10);
+                defaultInputForInitial[position] = helper;
+                if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
+                    processInputData(&initial, defaultInputForInitial, 3, 3);
+                    processInputData(&goal, goalWithNine, 15, 15);
+                    iterativeDeepeningAStar(&initial, &goal, 3, 3);
+                    position = 0;
+                } else {
+                    position++;
+                }
+                count++;
+            }
         } else if (!strcmp(argv[1], "-gbfs")) {
-            processInputData(&initial, inputForInitial, sizeOfInput, line, column);
-            greedySearch(&initial, &goal, line, column);
+            int position = 0;
+            int count = 2;
+            while (count != argc) {
+                int helper = strtol(argv[count], NULL, 10);
+                defaultInputForInitial[position] = helper;
+                if ((strrchr(argv[count], ',') != NULL) || count + 1 == argc) {
+                    processInputData(&initial, defaultInputForInitial, 3, 3);
+                    processInputData(&goal, goalWithNine, 15, 15);
+                    greedySearch(&initial, &goal, 3, 3);
+                    position = 0;
+                } else {
+                    position++;
+                }
+                count++;
+            }
         }
     }
     return 0;
